@@ -1,0 +1,112 @@
+@import "variables";
+
+.header {
+  nav {
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+    padding-bottom: 0.35rem;
+    margin: 0.3rem auto;
+    width: 64rem;
+
+
+    @include breakpoint-down(medium) {
+      width: 100%;
+      padding-left: 2rem; 
+      padding-right: 2rem;
+    }
+
+    @include breakpoint-down(small) {
+      width: 100%;
+      padding-left: 1.5rem; 
+      padding-right: 1.5rem;
+    }
+
+    > .btn {
+      font-size: $font-a;
+    }
+  }
+
+  &__logo {
+    > img {
+      height: 4.375rem;
+    }
+
+    &:hover {
+      > img {
+        height: 4.205rem;
+        margin: 0.085rem 0.225rem;
+        opacity: 0.9;
+      }
+    }
+
+    //For mobile, set header height to 60px 
+    @include breakpoint-down(medium) {
+      > img {
+        height: 3.75rem;
+
+        &:hover {
+          height: 3.58rem;
+          margin: 0.085rem 0.225rem;
+        }
+      }
+    }
+
+
+  }
+
+  &__menu { //Mobile Menu
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $primaryColor;
+      margin-left: 1.5rem;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__links {
+    > a {
+      color: $primaryColor;
+      font-size: $font-a;
+
+      &:hover {
+        // color: white;
+        // background-color: $primaryColor;
+        color: $primaryColor;
+        border: 1px solid $primaryColor; //width, style, color
+      }
+
+      &:not(:last-child) {
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+
+
+
+// .header {
+//   height: $headerHeight;
+//   // border-bottom: 1.5px solid #ECECEC;
+//   color: $secondaryColor;
+//   display: grid;
+//   grid-template-columns: 27% 20% 13% 90px 70px 65px 70px 70px ;
+//   align-items: center;
+//   min-height: inherit;
+//   a {
+//     grid-column-start: 2;
+//   }
+
+//   span {
+//     font-weight: normal;
+//   }
+  
+//   #start {
+//     grid-column-start: 4;
+//   }
+// }
