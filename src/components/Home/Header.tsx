@@ -1,6 +1,7 @@
+import React from 'react';
 import logo from '../../assets/images/header.png'
 
-const Header = () => {
+const Header: React.FC = () => {
   
   return (
     <header className='header bottom-shadow'>

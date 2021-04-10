@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <header className='hero'>
     </header>
