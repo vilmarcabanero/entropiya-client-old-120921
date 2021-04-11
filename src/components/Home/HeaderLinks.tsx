@@ -17,13 +17,13 @@ const HeaderLinks: React.FC = () => {
 const primaryColor = '#0082e6'
 const celticBlue = '#246BCE';
 const fontA = '1.1rem';
-const medium = '75.9375em'
+const maxMedium = '75.9375em'
 
 const HLStyle = styled.div`
   > a {
     font-size: ${fontA};
   
-    @media (max-width: ${medium}) {
+    @media (max-width: ${maxMedium}) {
       display: none;
     }
   
