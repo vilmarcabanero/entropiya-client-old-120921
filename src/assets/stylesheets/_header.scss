@@ -61,11 +61,28 @@
       height: 2px;
       background-color: $primaryColor;
       margin-left: 1.5rem;
+      transition: all 300ms ease-in-out;
+      transform-origin: left center;
 
       &:not(:last-child) {
         margin-bottom: 5px;
       }
     }
+
+    &.open {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+
   }
 
   &__links {
@@ -86,27 +103,3 @@
     }
   }
 }
-
-
-
-
-// .header {
-//   height: $headerHeight;
-//   // border-bottom: 1.5px solid #ECECEC;
-//   color: $secondaryColor;
-//   display: grid;
-//   grid-template-columns: 27% 20% 13% 90px 70px 65px 70px 70px ;
-//   align-items: center;
-//   min-height: inherit;
-//   a {
-//     grid-column-start: 2;
-//   }
-
-//   span {
-//     font-weight: normal;
-//   }
-  
-//   #start {
-//     grid-column-start: 4;
-//   }
-// }

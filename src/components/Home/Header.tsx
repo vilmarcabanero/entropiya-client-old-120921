@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
 import logo from '../../assets/images/header.png'
+// import './logic/header.js'
 
 const Header: React.FC = () => {
-  
+
   return (
     <header className='header bottom-shadow'>
       <nav className='flex flex-jc-sb flex-ai-c'>
@@ -19,15 +20,14 @@ const Header: React.FC = () => {
         </div>
 
         <div className='flex flex-jc-sb flex-ai-c'>
-          <a href='/' className='btn btn-outline-primary' id='hide-for-mobile'>Login</a>
+          <button className='btn btn-outline-primary' id='hide-for-mobile'>Login</button>
 
-          <a href='/' className='header__menu hide-for-desktop'>
+          <a id='btnHamburger' href='/' className='header__menu hide-for-desktop'>
             <span></span>
             <span></span>
             <span></span>
           </a>
         </div>
-
 
       </nav>
         
