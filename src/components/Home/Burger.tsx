@@ -2,7 +2,7 @@ import React from 'react';
 
 const Burger: React.FC = () => {
   return (
-    <div>
+    <div className='burger'>
       Burger
     </div>
   );

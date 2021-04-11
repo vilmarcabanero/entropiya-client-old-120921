@@ -8,7 +8,6 @@
     margin: 0.3rem auto;
     width: 76rem;
 
-
     @include breakpoint-down(medium) {
       width: 100%;
       padding-left: 2rem; 
@@ -21,7 +20,7 @@
       padding-right: 1.5rem;
     }
 
-    > div > button {
+    > button {
       font-size: $font-a;
       background-color: $primaryColor;
       color: white;
@@ -30,64 +29,25 @@
         background-color: white;
         
       }
+      @include breakpoint-down(medium) {
+        display: none;
+      }
     }
-  }
 
-  &__logo {
-    > img {
+    > a > img {
       height: 4.375rem;
-    }
-
-    &:hover {
-      > img {
+      &:hover {
         height: 4.205rem;
         margin: 0.085rem 0.225rem;
         opacity: 0.9;
       }
-    }
-
-    //For mobile, set header height to 60px 
-    @include breakpoint-down(small) {
-      > img {
+      //For mobile, set header height to 60px 
+      @include breakpoint-down(small) {
         height: 3.75rem;
-
         &:hover {
           height: 3.58rem;
           margin: 0.085rem 0.225rem;
         }
-      }
-    }
-
-
-  }
-
-  &__links {
-    > a {
-      // color: $primaryColor;
-      font-size: $font-a;
-
-      &::after {
-        position: relative;
-        content: '';
-        display: block;
-        width: 0;
-        height: 3px;
-        background: $primaryColor;
-        transition: width .6s;
-        bottom: -1.625rem;
-      }
-
-      &:hover {
-        color: $celticBlue;
-      }
-
-      &:hover::after {
-        width: 100%;
-        transition: width .6s;
-      }
-
-      &:not(:last-child) {
-        margin-right: 2px;
       }
     }
   }

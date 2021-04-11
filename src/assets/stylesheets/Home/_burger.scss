@@ -1,4 +1,12 @@
+.burger {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
 
+
+  
+  
   // &__menu { //Mobile Menu
   //   > span {
   //     display: block;
