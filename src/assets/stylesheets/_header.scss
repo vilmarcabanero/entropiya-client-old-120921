@@ -6,7 +6,7 @@
     padding-right: 1.5rem;
     padding-bottom: 0.35rem;
     margin: 0.3rem auto;
-    width: 64rem;
+    width: 76rem;
 
 
     @include breakpoint-down(medium) {
@@ -21,8 +21,15 @@
       padding-right: 1.5rem;
     }
 
-    > .btn {
+    > div > button {
       font-size: $font-a;
+      background-color: $primaryColor;
+      color: white;
+      &:hover {
+        color: $primaryColor;
+        background-color: white;
+        
+      }
     }
   }
 
@@ -40,7 +47,7 @@
     }
 
     //For mobile, set header height to 60px 
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(small) {
       > img {
         height: 3.75rem;
 
@@ -54,51 +61,67 @@
 
   }
 
-  &__menu { //Mobile Menu
-    > span {
-      display: block;
-      width: 26px;
-      height: 2px;
-      background-color: $primaryColor;
-      margin-left: 1.5rem;
-      transition: all 300ms ease-in-out;
-      transform-origin: left center;
+  // &__menu { //Mobile Menu
+  //   > span {
+  //     display: block;
+  //     width: 26px;
+  //     height: 2px;
+  //     background-color: $primaryColor;
+  //     margin-left: 1.5rem;
+  //     transition: all 300ms ease-in-out;
+  //     transform-origin: left center;
 
-      &:not(:last-child) {
-        margin-bottom: 5px;
-      }
-    }
+  //     &:not(:last-child) {
+  //       margin-bottom: 5px;
+  //     }
+  //   }
 
-    &.open {
-      > span:first-child {
-        transform: rotate(45deg);
-      }
+  //   &.open {
+  //     > span {
+  //       width: 50px;
+  //     }
+  //     > span:first-child {
+  //       transform: rotate(45deg);
+  //     }
 
-      > span:nth-child(2) {
-        opacity: 0;
-      }
+  //     > span:nth-child(2) {
+  //       opacity: 0;
+  //     }
 
-      > span:last-child {
-        transform: rotate(-45deg);
-      }
-    }
+  //     > span:last-child {
+  //       transform: rotate(-45deg);
+  //     }
+  //   }
 
-  }
+  // }
 
   &__links {
     > a {
-      color: $primaryColor;
+      // color: $primaryColor;
       font-size: $font-a;
 
+      &::after {
+        position: relative;
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: $primaryColor;
+        transition: width .6s;
+        bottom: -1.625rem;
+      }
+
       &:hover {
-        // color: white;
-        // background-color: $primaryColor;
-        color: $primaryColor;
-        border: 1px solid $primaryColor; //width, style, color
+        color: $celticBlue;
+      }
+
+      &:hover::after {
+        width: 100%;
+        transition: width .6s;
       }
 
       &:not(:last-child) {
-        margin-right: 3px;
+        margin-right: 2px;
       }
     }
   }

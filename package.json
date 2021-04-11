@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.5"
+    "@types/jquery": "^3.5.5",
+    "@types/styled-components": "^5.1.9"
   }
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import logo from '../../assets/images/header.png'
 // import './logic/header.js'
 
-const Header: React.FC = () => {
+const Header = () => {
+
 
   return (
     <header className='header bottom-shadow'>
@@ -22,11 +23,12 @@ const Header: React.FC = () => {
         <div className='flex flex-jc-sb flex-ai-c'>
           <button className='btn btn-outline-primary' id='hide-for-mobile'>Login</button>
 
-          <a id='btnHamburger' href='/' className='header__menu hide-for-desktop'>
+
+          {/* <a id='btnHamburger' href='/' class='header__menu hide-for-desktop'>
             <span></span>
             <span></span>
             <span></span>
-          </a>
+          </a> */}
         </div>
 
       </nav>
