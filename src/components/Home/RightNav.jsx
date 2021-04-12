@@ -6,17 +6,18 @@ const RightNav = ({open}) => {
     <>
       
     <StyledRightNav open={open}>
-      <li><a className="btn" href="/">Courses</a></li>
-      <li><a className="btn" href="/">MCQs</a></li>
-      <li><a className="btn" href="/">Quiz</a></li>
-      <li><a className="btn" href="/">Formulas</a></li>
-      <li><a className="btn" href="/">Formula Calculator</a></li>
-      <li><button className='btn btn-outline-primary'>Login</button></li>
+      <a href="#">Courses</a>
+      <a href="#">MCQs</a>
+      <a href="#">Quiz</a>
+      <a href="#">Formulas</a>
+      <a href="#">Formula Calculator</a>
+      <button className='btn btn-outline-primary'>Login</button>
     </StyledRightNav>
     </>
   )
 }
 
+const lightGrayishBlue = 'hsl(220, 16%, 96%)';
 const primaryColor = '#0082e6';
 
 const StyledRightNav = styled.div`
@@ -25,15 +26,16 @@ const StyledRightNav = styled.div`
   box-shadow: 0px 5px 15px 0px #888888;
   align-items: flex-start;
   padding: 2rem 2rem 0 2rem;
-
-  > li {
-    width: 100%;
-    /* margin-left: 2em; */
-
     > a {
+      text-decoration: none;
+      color: black;
+      padding-bottom: 0.5rem;
+      width: 100%;
+
       &:hover {
       color: ${primaryColor};
-    }
+      font-weight: bold;
+      }
     }
     > button {
       margin-top: 1em;
@@ -45,8 +47,7 @@ const StyledRightNav = styled.div`
         color: ${primaryColor};
         background-color: white;
       }
-    } 
-  }
+    }
 
   @media (min-width: 55rem) {
     display: none

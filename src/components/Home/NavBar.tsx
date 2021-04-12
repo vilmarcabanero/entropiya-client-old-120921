@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
   return (
     <>
     <StyledNavBar>
-        <a href='/'>
+        <a href='#'>
           <img src={logo} alt="logo" />
         </a>
         <HeaderLinks/>

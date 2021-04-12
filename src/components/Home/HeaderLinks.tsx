@@ -5,11 +5,11 @@ const HeaderLinks: React.FC = () => {
 
   return (
     <StyledHeaderLinks>
-      <a className="btn" href="/">Courses</a>
-      <a className="btn" href="/">MCQs</a>
-      <a className="btn" href="/">Quiz</a>
-      <a className="btn" href="/">Formulas</a>
-      <a className="btn" href="/">Formula Calculator</a>
+      <a href="#">Courses</a>
+      <a href="#">MCQs</a>
+      <a href="#">Quiz</a>
+      <a href="#">Formulas</a>
+      <a href="#">Formula Calculator</a>
     </StyledHeaderLinks>
   );
 }
@@ -19,8 +19,17 @@ const celticBlue = '#246BCE';
 const fontA = '1.1rem';
 
 const StyledHeaderLinks = styled.div`
+  display: flex;
+  flex-flow: row;
   > a {
+    padding: 1.2rem 1.3em 1.2rem 1.3rem;
+    text-decoration: none;
+    color: black;
     font-size: ${fontA};
+
+    @media (max-width: 57rem) {
+      padding: 1.2rem 0.7em 1.2rem 0.7rem;
+    }
   
     @media (max-width: 55rem) {
       display: none;
