@@ -6,12 +6,12 @@ import {FaAngleDown} from 'react-icons/fa'
 const HeaderLinks: React.FC = () => {
 
   return (
-    <StyledHeaderLinks>
-      <a href="#">Courses</a>
-      <a href="#">MCQs</a> 
-      <a href="#">Quiz<StyledFaAngleDown/></a>
-      <a href="#">Formulas</a>
-      <a href="#">Formula Calculator</a> 
+    <StyledHeaderLinks className='headerlinks'>
+      <a id='courses' href="#">Courses<StyledFaAngleDownCourses className='courses'/></a>
+      <a id='mcqs' href="#">MCQs<StyledFaAngleDownMCQs className='mcqs'/></a> 
+      <a id='quiz' href="#">Quiz<StyledFaAngleDownQuiz className='quiz'/></a>
+      <a id='formulas' href="#">Formulas<StyledFaAngleDownFormulas className='formulas'/></a>
+      <a id='formula-calculator' href="#">Formula Calculator<StyledFaAngleDownFormulaCalculator className='formula-calculator'/></a> 
     </StyledHeaderLinks>
   );
 }
@@ -20,14 +20,11 @@ const primaryColor = '#0082e6';
 const celticBlue = '#246BCE';
 const fontA = '1.05rem';
 
-const StyledFaAngleDown = styled(FaAngleDown)`
-  margin-left: 2px;
-  font-size: 1rem;
-  color: ${celticBlue};
-  &:hover {
-    color: ${celticBlue};
-  }
-`
+// const Button = styled.button`
+//   ${Wrapper}:hover & {
+//     display: none;
+//   }
+// `;
 
 const StyledHeaderLinks = styled.div`
   display: flex;
@@ -45,7 +42,6 @@ const StyledHeaderLinks = styled.div`
     @media (max-width: 55rem) {
       display: none;
     }
-
   
     &::after {
       position: relative;
@@ -72,5 +68,42 @@ const StyledHeaderLinks = styled.div`
     }
   }
 `
+
+const StyledFaAngleDownCourses = styled(FaAngleDown)`
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: ${celticBlue};
+`
+
+const StyledFaAngleDownMCQs = styled(FaAngleDown)`
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: ${celticBlue};
+`
+
+
+const StyledFaAngleDownQuiz = styled(FaAngleDown)`
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: ${celticBlue};
+`
+
+
+const StyledFaAngleDownFormulas = styled(FaAngleDown)`
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: ${celticBlue};
+`
+
+
+const StyledFaAngleDownFormulaCalculator = styled(FaAngleDown)`
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: ${celticBlue};
+`
+
+
+
+
 
 export default HeaderLinks;
