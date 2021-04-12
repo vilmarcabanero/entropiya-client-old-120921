@@ -57,10 +57,9 @@ const StyledRightNav = styled.div`
       background-color: white;
       position: fixed;
       transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-      top: 5.35rem;
-      /* right: 2%; */
+      top: 4.8rem;
       right: ${({open}) => open ? '2%' : '-2%'};
-      height: 50vh;
+      height: 20rem;
       width: 96%;
       border-radius: 5px 5px 5px 5px;
       /* padding-top: 1rem; */
