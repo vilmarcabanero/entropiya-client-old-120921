@@ -69,13 +69,13 @@ const StyledNavBar = styled.nav`
         opacity: 0.9;
       }
       //For mobile, set header height to 60px 
-      @media (max-width: 40rem) {
+      /* @media (max-width: 40rem) {
         height: 3.75rem;
         &:hover {
           height: 3.58rem;
           margin: 0.085rem 0.225rem;
         }
-      }
+      } */
     }
 `
 
