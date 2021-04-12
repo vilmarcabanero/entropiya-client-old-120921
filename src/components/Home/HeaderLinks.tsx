@@ -1,22 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import {FaAngleDown} from 'react-icons/fa'
+
 
 const HeaderLinks: React.FC = () => {
 
   return (
     <StyledHeaderLinks>
       <a href="#">Courses</a>
-      <a href="#">MCQs</a>
-      <a href="#">Quiz</a>
+      <a href="#">MCQs</a> 
+      <a href="#">Quiz<StyledFaAngleDown/></a>
       <a href="#">Formulas</a>
-      <a href="#">Formula Calculator</a>
+      <a href="#">Formula Calculator</a> 
     </StyledHeaderLinks>
   );
 }
 
 const primaryColor = '#0082e6';
 const celticBlue = '#246BCE';
-const fontA = '1.1rem';
+const fontA = '1.05rem';
+
+const StyledFaAngleDown = styled(FaAngleDown)`
+  margin-left: 2px;
+  font-size: 1rem;
+  color: ${celticBlue};
+  &:hover {
+    color: ${celticBlue};
+  }
+`
 
 const StyledHeaderLinks = styled.div`
   display: flex;

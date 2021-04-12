@@ -17,7 +17,6 @@ const RightNav = ({open}) => {
   )
 }
 
-const lightGrayishBlue = 'hsl(220, 16%, 96%)';
 const primaryColor = '#0082e6';
 
 const StyledRightNav = styled.div`
@@ -25,7 +24,18 @@ const StyledRightNav = styled.div`
   display: flex;
   box-shadow: 0px 5px 15px 0px #888888;
   align-items: flex-start;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
+  flex-flow: column;
+  background-color: white;
+  position: fixed;
+  transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+  top: 4.8rem;
+  right: ${({open}) => open ? '2%' : '-10%'};
+  width: 96%;
+  border-radius: 5px;
+  /* padding-top: 1rem; */
+  transition: transform 0.3s ease-in-out;
+
     > a {
       text-decoration: none;
       color: black;
@@ -52,20 +62,6 @@ const StyledRightNav = styled.div`
   @media (min-width: 55rem) {
     display: none
   }
-
-  @media (max-width: 55rem) {
-      flex-flow: column nowrap;
-      background-color: white;
-      position: fixed;
-      transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-      top: 4.8rem;
-      right: ${({open}) => open ? '2%' : '-2%'};
-      height: 20rem;
-      width: 96%;
-      border-radius: 5px 5px 5px 5px;
-      /* padding-top: 1rem; */
-      transition: transform 0.3s ease-in-out;
-    }
 
 `
 
