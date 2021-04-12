@@ -4,28 +4,28 @@ import styled from 'styled-components';
 const HeaderLinks: React.FC = () => {
 
   return (
-    <HLStyle>
+    <StyledHeaderLinks>
       <a className="btn" href="/">Courses</a>
       <a className="btn" href="/">MCQs</a>
       <a className="btn" href="/">Quiz</a>
       <a className="btn" href="/">Formulas</a>
       <a className="btn" href="/">Formula Calculator</a>
-    </HLStyle>
+    </StyledHeaderLinks>
   );
 }
 
-const primaryColor = '#0082e6'
+const primaryColor = '#0082e6';
 const celticBlue = '#246BCE';
 const fontA = '1.1rem';
-const maxMedium = '75.9375em'
 
-const HLStyle = styled.div`
+const StyledHeaderLinks = styled.div`
   > a {
     font-size: ${fontA};
   
-    @media (max-width: ${maxMedium}) {
+    @media (max-width: 55rem) {
       display: none;
     }
+
   
     &::after {
       position: relative;

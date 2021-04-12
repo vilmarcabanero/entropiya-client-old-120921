@@ -6,23 +6,24 @@ import styled from 'styled-components';
 
 const NavBar: React.FC = () => {
   return (
-    <NavBarStyle>
+    <>
+    <StyledNavBar>
         <a href='/'>
           <img src={logo} alt="logo" />
         </a>
         <HeaderLinks/>
         <button className='btn btn-outline-primary'>Login</button>
         <Burger/>
-    </NavBarStyle>
+    </StyledNavBar>
+    </>
   );
 }
 
 const primaryColor = '#0082e6'
 const fontA = '1.1rem'
-const maxMedium = '75.9375em'
-const maxSmall = '39.9375em'
 
-const NavBarStyle = styled.nav`
+
+const StyledNavBar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,13 +34,14 @@ const NavBarStyle = styled.nav`
     margin: 0.3rem auto;
     width: 76rem;
 
-    @media (max-width: ${maxMedium}) {
+    @media (max-width: 76rem) {
       width: 100%;
       padding-left: 2rem; 
       padding-right: 2rem;
     }
 
-    @media (max-width: ${maxMedium}) {
+
+    @media (max-width: 40rem) {
       width: 100%;
       padding-left: 1.5rem; 
       padding-right: 1.5rem;
@@ -54,7 +56,7 @@ const NavBarStyle = styled.nav`
         background-color: white;
         
       }
-      @media (max-width: ${maxMedium}) {
+      @media (max-width: 55rem) {
         display: none;
       }
     }
@@ -67,7 +69,7 @@ const NavBarStyle = styled.nav`
         opacity: 0.9;
       }
       //For mobile, set header height to 60px 
-      @media (max-width: ${maxSmall}) {
+      @media (max-width: 40rem) {
         height: 3.75rem;
         &:hover {
           height: 3.58rem;
