@@ -4,7 +4,7 @@ import HeaderLinks from './HeaderLinks';
 import Burger from './Burger';
 import styled from 'styled-components';
 
-const NavBar: React.FC = () => {
+const NavBar= () => {
   return (
     <>
     <StyledNavBar>

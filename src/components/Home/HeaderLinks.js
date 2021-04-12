@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import {FaAngleDown} from 'react-icons/fa'
 
 
-const HeaderLinks: React.FC = () => {
+const HeaderLinks = () => {
 
   return (
     <StyledHeaderLinks className='headerlinks'>
       <a id='courses' href="#">Courses<StyledFaAngleDownCourses className='courses'/></a>
       <a id='mcqs' href="#">MCQs<StyledFaAngleDownMCQs className='mcqs'/></a> 
-      <a id='quiz' href="#">Quiz<StyledFaAngleDownQuiz className='quiz'/></a>
+      <a href="#">Quiz</a>
       <a id='formulas' href="#">Formulas<StyledFaAngleDownFormulas className='formulas'/></a>
       <a id='formula-calculator' href="#">Formula Calculator<StyledFaAngleDownFormulaCalculator className='formula-calculator'/></a> 
     </StyledHeaderLinks>
@@ -76,13 +76,6 @@ const StyledFaAngleDownCourses = styled(FaAngleDown)`
 `
 
 const StyledFaAngleDownMCQs = styled(FaAngleDown)`
-  margin-left: 2px;
-  font-size: 0.9rem;
-  color: ${celticBlue};
-`
-
-
-const StyledFaAngleDownQuiz = styled(FaAngleDown)`
   margin-left: 2px;
   font-size: 0.9rem;
   color: ${celticBlue};
