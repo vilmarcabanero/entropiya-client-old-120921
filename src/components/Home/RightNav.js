@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { FaAngleDown } from "react-icons/fa";
 
 const RightNav = ({ open }) => {
   return (
     <>
       <StyledRightNav open={open}>
-        <a href="#">Courses</a>
+        <a href="#">
+          Courses <FaAngleDownCourses />
+        </a>
         <a href="#">MCQs</a>
         <a href="#">Quiz</a>
         <a href="#">Formulas</a>
@@ -17,22 +20,25 @@ const RightNav = ({ open }) => {
 };
 
 const primaryColor = "#0082e6";
+const celticBlue = "#246BCE";
 
 const StyledRightNav = styled.div`
   list-style: none;
   display: flex;
-  box-shadow: 0px 5px 15px 0px #888888;
+  /* box-shadow: 0px 5px 15px 0px #888888; */
+  box-shadow: 0px 5px 15px -5px #888888;
   align-items: flex-start;
   padding: 2rem;
   flex-flow: column;
   background-color: white;
   position: fixed;
+
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   top: 4.8rem;
   right: ${({ open }) => (open ? "2%" : "-10%")};
+
   width: 96%;
   border-radius: 5px;
-  /* padding-top: 1rem; */
   transition: transform 0.3s ease-in-out;
 
   > a {
@@ -61,6 +67,16 @@ const StyledRightNav = styled.div`
   @media (min-width: 55rem) {
     display: none;
   }
+`;
+
+const FaAngleDownCourses = styled(FaAngleDown)`
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+  font-size: 0.9rem;
+  color: ${celticBlue};
+  transform-origin: center center;
+  transform: rotate(-90deg);
 `;
 
 export default RightNav;
