@@ -30,15 +30,15 @@ const StyledHeaderLinks = styled.div`
   display: flex;
   flex-flow: row;
   > a {
-    padding: 1.2rem 1.3em 1.2rem 1.3rem;
+    padding: 1.2rem 1.3em;
     text-decoration: none;
     color: black;
     font-size: ${fontA};
 
-    @media (max-width: 57rem) {
-      padding: 1.2rem 0.7em 1.2rem 0.7rem;
+    @media (max-width: 59.5625rem) {
+      padding: 1.2rem 0.7em;
     }
-  
+  //913px - 953px
     @media (max-width: 55rem) {
       display: none;
     }
