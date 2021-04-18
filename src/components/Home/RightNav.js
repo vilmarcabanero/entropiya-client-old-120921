@@ -25,7 +25,8 @@ const StyledRightNav = styled.div`
 	list-style: none;
 	display: flex;
 	/* box-shadow: 0px 5px 15px 0px #888888; */
-	box-shadow: 0px 5px 15px -5px #888888;
+	/* box-shadow: 0px 5px 15px -5px #888888; */
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19);
 	align-items: flex-start;
 	padding: 2rem;
 	flex-flow: column;
@@ -33,7 +34,7 @@ const StyledRightNav = styled.div`
 	position: fixed;
 
 	transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-	top: 4.8rem;
+	top: 4.7rem;
 	right: ${({ open }) => (open ? '2%' : '-10%')};
 
 	width: 96%;

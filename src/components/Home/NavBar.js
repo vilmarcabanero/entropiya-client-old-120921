@@ -28,7 +28,6 @@ const StyledNavBar = styled.nav`
 
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
-	padding-bottom: 0.35rem;
 	margin: 0.3rem auto;
 	width: 76rem;
 
