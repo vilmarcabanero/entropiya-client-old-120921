@@ -8,7 +8,7 @@ const RightNav = ({ open }) => {
 				<a href='/'>
 					Courses <FaAngleDownCourses />
 				</a>
-				<a href='/'>MCQs</a>
+				<a href='/'>Study</a>
 				<a href='/'>Quiz</a>
 				<a href='/'>Formulas</a>
 				<a href='/'>Formula Calculator</a>

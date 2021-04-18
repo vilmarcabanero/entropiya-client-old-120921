@@ -8,9 +8,9 @@ const HeaderLinks = () => {
 				Courses
 				<StyledFaAngleDownCourses className='courses' />
 			</a>
-			<a id='mcqs' href='#/'>
-				MCQs
-				<StyledFaAngleDownMCQs className='mcqs' />
+			<a id='study' href='#/'>
+				Study
+				<StyledFaAngleDownMCQs className='study' />
 			</a>
 			<a href='/'>
 				Quiz
