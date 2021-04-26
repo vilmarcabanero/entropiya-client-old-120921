@@ -7,15 +7,15 @@ const Header = () => {
 	return (
 		<StyledStoryCard>
 			<h1 className='title'>
-				Online Review for <span>Licensure Exam.</span>
+				Online Review for Licensure Exam.
 			</h1>
 			<h2 className='subtitle'>
-				<span>Video Lectures, Quizzes, </span> <span> Formulas and more.</span>
+				Video Lectures, Quizzes, Formulas and more.
 			</h2>
 			<div className='form'>
 				<h3>
 					Ready to learn? Enter your email to start your{' '}
-					<span>30-day free trial.</span>
+					<span>30-day</span> free trial.
 				</h3>
 				<OptForm/>
 			</div>
@@ -88,7 +88,7 @@ const StyledStoryCard = styled.nav`
 	.form {
 		h3 {
 			font-size: 1.2rem;
-			max-width: 28rem;
+			max-width: 40rem;
 			text-align: center;
 			span {
 				display: inline-block;

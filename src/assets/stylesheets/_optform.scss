@@ -1,0 +1,16 @@
+
+
+.form-section form .input-group input:focus,
+.form-inline .btn:focus,
+.navbar-toggler:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+
+.form-inline .btn {
+	background-color: #74b9ff;
+	padding: 4px 30px;
+	border-radius: 2px;
+	color: white;
+}
