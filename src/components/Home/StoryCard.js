@@ -10,7 +10,7 @@ const Header = () => {
 				Online Review for <span>Board Exam.</span> 
 			</h1>
 			<h2 className='subtitle'>
-				Video Lectures, Quizzes, Formulas and more.
+				Video Lectures, Formulas, <span>Quizzes, and more.</span>
 			</h2>
 			<div className='form'>
 				<h3>
@@ -73,15 +73,24 @@ const StyledStoryCard = styled.nav`
 		@media (max-width: 90.625rem) {
 			font-size: 3.125rem;
 		}
+
+    @media (max-width: 30rem) {
+			font-size: 2rem;
+		}
 	}
 
 	.subtitle {
 		font-size: 1.75rem;
-		max-width: 40rem;
+		/* max-width: 40rem; */
 		text-align: center;
 		margin: 1rem 6.5rem;
 		span {
 			display: inline-block;
+		}
+
+    @media (max-width: 30rem) {
+			font-size: 1.125rem;
+      width: 100%;
 		}
 	}
 
@@ -93,7 +102,13 @@ const StyledStoryCard = styled.nav`
 			span {
 				display: inline-block;
 			}
+
+      @media (max-width: 30rem) {
+			font-size: 1.1rem;
+      width: 100%;
 		}
+		}
+
 	}
 `
 
