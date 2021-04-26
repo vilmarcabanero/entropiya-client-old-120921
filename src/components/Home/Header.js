@@ -26,8 +26,8 @@ const StyledHeader = styled.nav`
 
 	/* padding-top: 1rem; */
 	
-	padding-left: 2.5rem;
-	padding-right: 3.5rem;
+	padding-left: 2rem;
+	padding-right: 3rem;
 	width: 100%;
 
 
@@ -39,8 +39,8 @@ const StyledHeader = styled.nav`
 
 	@media (max-width: 40rem) {
 		width: 100%;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 	/* .forButton {
@@ -71,22 +71,6 @@ const StyledHeader = styled.nav`
 		}
 	}
 
-	> a > img {
-		height: 4.375rem;
-		&:hover {
-			height: 4.205rem;
-			margin: 0.085rem 0.225rem;
-			opacity: 0.9;
-		}
-		//For mobile, set header height to 60px
-		@media (max-width: 55rem) {
-			height: 3.75rem;
-			&:hover {
-				height: 3.58rem;
-				margin: 0.085rem 0.225rem;
-			}
-		}
-	}
 `
 
 export default Header

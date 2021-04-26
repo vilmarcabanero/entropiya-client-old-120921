@@ -17,36 +17,19 @@ const EntropiyaLogo = () => {
 const lightSkyBlue = 'LightSkyBlue'
 
 const StyledLogo = styled.div`
-	/* position: relative; */
-	font-weight: 500;
-	font-size: 2.5rem;
-
-	&:hover {
-		.Vc {
-			color: white;
-			opacity: 0.75;
-		}
-	}
-
 	> a {
 		text-decoration: none;
 		> img {
 			height: 5.5rem;
 
+      &:hover {
+        opacity: 0.9;
+      }
+
 			@media (max-width: 30rem) {
 				height: 4.25rem;
 			}
 		}
-	}
-
-	@media (max-width: 35rem) {
-		font-size: 2rem;
-	}
-	.Vc {
-		color: ${lightSkyBlue};
-	}
-	.symbol {
-		color: #00cccc;
 	}
 `
 
