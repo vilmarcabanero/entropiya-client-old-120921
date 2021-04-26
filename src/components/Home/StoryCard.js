@@ -39,7 +39,7 @@ const StyledStoryCard = styled.nav`
 
 	width: 60rem; //Initial width, similar sa netflix which is 59.375 or 950 pixels
 
-	padding: 4.75rem 0;
+	margin: 4.75rem 0;
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
@@ -57,10 +57,18 @@ const StyledStoryCard = styled.nav`
 		padding-right: 1.5rem;
 	}
 
+  @media (max-width: 30rem) {
+		width: 100%;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+    margin: 0rem 0;
+	}
+
 	@media (max-width: 22.5rem) {
 		width: 100%;
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
+    margin: 0rem 0;
 	}
 
 	.title {
