@@ -3,33 +3,38 @@ import logo from '../../assets/images/header.png'
 // import Burger from './Burger'
 import styled from 'styled-components'
 
-const NavBar = () => {
+const Header = () => {
 	return (
-		<>
 			<StyledHeader>
 				<a href='/'>
 					<img src={logo} alt='logo' />
 				</a>
 				{/* <HeaderLinks /> */}
-				<button className='btn btn-outline-primary'>Login</button>
+				<button className='button'>Sign in</button>
+
 				{/* <Burger /> */}
 			</StyledHeader>
-		</>
 	)
 }
 
 const primaryColor = '#0082e6'
 const fontA = '1.1rem'
+// const containerColorBlack = '#262626'
+// const jetColor = '#343434'
+// const favBlueBackground = '#4398ff'
 
 const StyledHeader = styled.nav`
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
-	margin: 0.3rem auto;
-	width: 76rem;
+	width: 100%;
+
+	background-color: white;
+	
 
 	@media (max-width: 76rem) {
 		width: 100%;
@@ -43,16 +48,30 @@ const StyledHeader = styled.nav`
 		padding-right: 1.5rem;
 	}
 
-	> button {
+	/* .forButton {
+		display: flex;
+
+		@media (max-width: 55rem) {
+			height: 1.875rem;
+		}
+	} */
+
+	.button {
 		font-size: ${fontA};
 		background-color: ${primaryColor};
 		color: white;
+		height: 2.3rem;
+		border: 1px solid ${primaryColor};
+		border-radius: 5px;
+		padding: 0 0.75rem;
 		&:hover {
 			color: ${primaryColor};
 			background-color: white;
 		}
+
 		@media (max-width: 55rem) {
-			display: none;
+			font-size: 1rem;
+			height: 2rem;
 		}
 	}
 
@@ -74,4 +93,4 @@ const StyledHeader = styled.nav`
 	}
 `
 
-export default NavBar
+export default Header
