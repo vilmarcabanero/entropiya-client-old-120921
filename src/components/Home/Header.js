@@ -1,23 +1,77 @@
-import NavBar from './NavBar'
+import logo from '../../assets/images/header.png'
+// import HeaderLinks from './HeaderLinks'
+// import Burger from './Burger'
 import styled from 'styled-components'
 
-// import './logic/header.js'
-
-const Header = () => {
+const NavBar = () => {
 	return (
-		<StyledHeader>
-			<NavBar />
-		</StyledHeader>
+		<>
+			<StyledHeader>
+				<a href='/'>
+					<img src={logo} alt='logo' />
+				</a>
+				{/* <HeaderLinks /> */}
+				<button className='btn btn-outline-primary'>Login</button>
+				{/* <Burger /> */}
+			</StyledHeader>
+		</>
 	)
 }
 
-const StyledHeader = styled.header`
-	/* box-shadow: 0 6px 4px -5px #888888; */
-	box-shadow: 0 3px 5px rgba(0,0,0,0.19);
-	position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+const primaryColor = '#0082e6'
+const fontA = '1.1rem'
+
+const StyledHeader = styled.nav`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	margin: 0.3rem auto;
+	width: 76rem;
+
+	@media (max-width: 76rem) {
+		width: 100%;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	@media (max-width: 40rem) {
+		width: 100%;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	> button {
+		font-size: ${fontA};
+		background-color: ${primaryColor};
+		color: white;
+		&:hover {
+			color: ${primaryColor};
+			background-color: white;
+		}
+		@media (max-width: 55rem) {
+			display: none;
+		}
+	}
+
+	> a > img {
+		height: 4.375rem;
+		&:hover {
+			height: 4.205rem;
+			margin: 0.085rem 0.225rem;
+			opacity: 0.9;
+		}
+		//For mobile, set header height to 60px
+		@media (max-width: 55rem) {
+			height: 3.75rem;
+			&:hover {
+				height: 3.58rem;
+				margin: 0.085rem 0.225rem;
+			}
+		}
+	}
 `
 
-export default Header
+export default NavBar
