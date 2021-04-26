@@ -24,7 +24,8 @@ const StyledHeader = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 
-	padding-top: 1rem;
+	/* padding-top: 1rem; */
+	
 	padding-left: 2.5rem;
 	padding-right: 3.5rem;
 	width: 100%;
