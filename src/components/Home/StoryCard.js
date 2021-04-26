@@ -43,7 +43,6 @@ const StyledStoryCard = styled.nav`
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
-	/* background-color: ${jetColor}; */
 
 	@media (max-width: 60rem) {
 		width: 100%;

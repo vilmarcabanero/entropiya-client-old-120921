@@ -36,7 +36,7 @@ const StyledLogo = styled.div`
 	}
 	.Vc {
 		color: ${lightSkyBlue};
-		font-style: italic;
+		font-weight: bold;
 	}
 	.symbol {
 		color: #00cccc;
