@@ -39,7 +39,7 @@ const StyledHeader = styled.nav`
 
 	@media (max-width: 40rem) {
 		width: 100%;
-		padding-left: 1rem;
+		padding-left: 0.5rem;
 		padding-right: 1rem;
 	}
 
