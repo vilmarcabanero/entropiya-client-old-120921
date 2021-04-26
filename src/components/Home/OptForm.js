@@ -41,7 +41,7 @@ const FaAngleDownRight = styled(FaAngleDown)`
 const StyledOptForm = styled.div`
 	.form-section form {
 		position: relative;
-
+    margin-top: 1rem;
 		.input-group {
 			input {
 				height: 50px;
@@ -102,7 +102,7 @@ const StyledOptForm = styled.div`
 						width: 120px;
 						font-size: 1rem;
             height: 32px;
-            line-height: 29px;
+            line-height: 32px;
 						&:hover {
 							font-size: 0.9rem;
 						}

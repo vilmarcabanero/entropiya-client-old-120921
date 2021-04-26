@@ -7,14 +7,14 @@ const Header = () => {
 	return (
 		<StyledStoryCard>
 			<h1 className='title'>
-				Online Review for Licensure Exam.
+				Online Review for <span>Board Exam.</span> 
 			</h1>
 			<h2 className='subtitle'>
 				Video Lectures, Quizzes, Formulas and more.
 			</h2>
 			<div className='form'>
 				<h3>
-					Ready to learn? Enter your email to start your{' '}
+					Ready to pass? Enter your email to start your{' '}
 					<span>30-day</span> free trial.
 				</h3>
 				<OptForm/>
