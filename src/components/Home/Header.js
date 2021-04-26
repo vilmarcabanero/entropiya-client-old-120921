@@ -20,7 +20,7 @@ const Header = () => {
 const primaryColor = '#0082e6'
 const fontA = '1.1rem'
 // const containerColorBlack = '#262626'
-// const jetColor = '#343434'
+const jetColor = '#343434'
 // const favBlueBackground = '#4398ff'
 
 const StyledHeader = styled.nav`
@@ -33,8 +33,6 @@ const StyledHeader = styled.nav`
 	padding-right: 1.5rem;
 	width: 100%;
 
-	background-color: white;
-	
 
 	@media (max-width: 76rem) {
 		width: 100%;
