@@ -24,8 +24,7 @@ const StyledHeader = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 
-	/* padding-top: 1rem; */
-	
+	padding-top: 1rem;
 	padding-left: 2rem;
 	padding-right: 3rem;
 	width: 100%;
@@ -39,7 +38,7 @@ const StyledHeader = styled.nav`
 
 	@media (max-width: 40rem) {
 		width: 100%;
-		padding-left: 0.5rem;
+		padding-left: 1rem;
 		padding-right: 1rem;
 	}
 
