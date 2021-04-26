@@ -1,18 +1,11 @@
-import logo from '../../assets/images/header.png'
-// import HeaderLinks from './HeaderLinks'
-// import Burger from './Burger'
 import styled from 'styled-components'
+import EntropiyaLogo from './EntropiyaLogo'
 
 const Header = () => {
 	return (
 			<StyledHeader>
-				<a href='/'>
-					<img src={logo} alt='logo' />
-				</a>
-				{/* <HeaderLinks /> */}
+				<EntropiyaLogo/>
 				<button className='button'>Sign in</button>
-
-				{/* <Burger /> */}
 			</StyledHeader>
 	)
 }
@@ -23,14 +16,16 @@ const fontA = '1.1rem'
 const jetColor = '#343434'
 // const favBlueBackground = '#4398ff'
 
+
 const StyledHeader = styled.nav`
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding-top: 1rem;
+	padding-left: 2.5rem;
+	padding-right: 3.5rem;
 	width: 100%;
 
 
@@ -56,15 +51,16 @@ const StyledHeader = styled.nav`
 
 	.button {
 		font-size: ${fontA};
-		background-color: ${primaryColor};
-		color: white;
+		background-color: white;
+		color: black;
 		height: 2.3rem;
-		border: 1px solid ${primaryColor};
+		border: 1px solid ${jetColor};
 		border-radius: 5px;
 		padding: 0 0.75rem;
 		&:hover {
-			color: ${primaryColor};
-			background-color: white;
+			color: white;
+			background-color: ${jetColor};
+			border-color: white;
 		}
 
 		@media (max-width: 55rem) {
