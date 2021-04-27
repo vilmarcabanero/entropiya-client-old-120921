@@ -34,12 +34,14 @@ const StyledHeader = styled.nav`
 		width: 100%;
 		padding-left: 2rem;
 		padding-right: 2rem;
+		
 	}
 
 	@media (max-width: 40rem) {
 		width: 100%;
-		padding-left: 1rem;
+		padding-left: 0.75rem;
 		padding-right: 1rem;
+		padding-top: 0.75rem;
 	}
 
 	/* .forButton {
