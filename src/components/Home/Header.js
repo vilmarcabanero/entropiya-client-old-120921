@@ -66,9 +66,9 @@ const StyledHeader = styled.nav`
 			border-color: white;
 		}
 
-		@media (max-width: 55rem) {
+		@media (max-width: 30rem) {
 			font-size: 1rem;
-			height: 2rem;
+			height: 1.75rem;
 		}
 	}
 

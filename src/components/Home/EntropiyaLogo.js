@@ -11,21 +11,13 @@ const EntropiyaLogo = () => {
 	)
 }
 
-const lightSkyBlue = 'LightSkyBlue'
-
 const StyledLogo = styled.div`
 	> a {
-		text-decoration: none;
-    .Vc {
-      color: #1b9ff3;
-      font-size: 3rem;
-      font-weight: 500;
-    }
 		> img {
 			height: 4rem;
 
       &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
       }
 
 			@media (max-width: 30rem) {
