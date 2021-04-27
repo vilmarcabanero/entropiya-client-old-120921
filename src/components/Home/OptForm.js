@@ -54,7 +54,10 @@ const StyledOptForm = styled.div`
 
         @media (max-width: 30rem) {
           height: 35px;
-          font-size: 1rem;
+          font-size: 0.95rem;
+					&::placeholder {
+					font-size: 0.95rem;
+				}
 				}
 			}
 
