@@ -54,16 +54,16 @@ const StyledHeader = styled.nav`
 
 	.button {
 		font-size: ${fontA};
-		background-color: white;
-		color: black;
+		background-color: #06f;
+		color: white;
 		height: 2.3rem;
-		border: 1px solid ${jetColor};
+		border: 1px solid #06f;
 		border-radius: 5px;
 		padding: 0 0.75rem;
 		&:hover {
-			color: white;
-			background-color: ${jetColor};
-			border-color: white;
+			color: #06f;
+			background-color: white;
+			border-color: #06f;
 		}
 
 		@media (max-width: 30rem) {
