@@ -135,9 +135,12 @@ const StyledOptForm = styled.div`
 				height: 3.5rem;
 				color: black;
 				font-size: 1rem;
-				outline: none;
+				outline: none !important;
 				border: none;
+				appearance: none;
+				box-shadow: none;
 				padding-bottom: 0px;
+				border-radius: 4px 0 0 4px;
 				&:valid + .placeholder,
 				&:focus + .placeholder {
 					top: 0px;
@@ -146,8 +149,14 @@ const StyledOptForm = styled.div`
 				}
 
 				@media (max-width: 30rem) {
-					height: 3rem;
+					height: 2.5rem;
 					font-size: 0.95rem;
+					&:valid + .placeholder,
+					&:focus + .placeholder {
+						top: -1.5px;
+						font-size: 0.65rem;
+						color: black;
+					}
 				}
 			}
 
@@ -160,8 +169,8 @@ const StyledOptForm = styled.div`
 				transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
 				cursor: text;
 				@media (max-width: 30rem) {
-					top: 0.8rem;
-					font-size: 0.95rem;
+					top: 0.6rem;
+					font-size: 0.9rem;
 				}
 			}
 		}
@@ -171,7 +180,13 @@ const StyledOptForm = styled.div`
 			justify-content: center;
 			align-items: center;
 			background-color: white;
-			height: 
+			height: 3.5rem;
+			padding-right: 0.25rem;
+			border-radius: 0 4px 4px 0;
+			@media (max-width: 30rem) {
+				height: 2.5rem;
+				font-size: 0.95rem;
+			}
 		}
 
 		button {
@@ -190,8 +205,9 @@ const StyledOptForm = styled.div`
 			font-size: 1.3rem;
 
 			@media (max-width: 30rem) {
-				width: 7.75rem;
-				height: 2.5rem;
+				width: 7.6rem;
+				height: 2rem;
+				padding-left: 0.9rem;
 				font-size: 1rem;
 				.arrow {
 					height: 1rem;
