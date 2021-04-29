@@ -16,13 +16,13 @@ const App = () => {
 			<ParticleBackground />
 			<Header />
 			{/* <SignUp/> */}
-			{/* <Home/> */}
+			<Home/>
 			{/* <Header /> */}
-			<Switch>
+			{/* <Switch>
 				<Route exact path='/' component={Home} />
 				<Route exact path='/signup' component={SignUp} />
 				<Route exact path='/signin' component={SignIn} />
-			</Switch>
+			</Switch> */}
 		</>
 	)
 }
