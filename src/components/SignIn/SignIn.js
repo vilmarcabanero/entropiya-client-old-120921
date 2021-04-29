@@ -36,7 +36,7 @@ export default function SignIn() {
 				</a>
 				<button>Sign in</button>
 				<div className='new'>
-					<span>New to Entropiya? </span> <Link to='/signup'> Sign up now</Link>
+					<span>New to Entropiya? </span> <Link to='/'> Sign up now</Link>
 				</div>
 			</Styled>
 		</>
