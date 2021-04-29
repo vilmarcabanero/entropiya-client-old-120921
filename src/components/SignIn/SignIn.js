@@ -16,14 +16,14 @@ export default function SignIn() {
 				<h1>Sign in</h1>
 				<div className='flex'>
 					<label class='custom-input'>
-						<input className='firstname' required />
+						<input className='firstname' placeholder='' required />
 						<span className='placeholder'>Email address</span>
 					</label>
 				</div>
 
 				<div className='password-container'>
 					<label class='custom-input'>
-						<input className='password' type={PasswordInputType} required />
+						<input className='password' placeholder='' type={PasswordInputType} required />
 						<span className='placeholder'>Password</span>
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
@@ -119,12 +119,14 @@ const Styled = styled.div`
 			border-left: none;
 			border-right: none;
 
+		
 			&:valid + .placeholder,
 			&:focus + .placeholder {
 				top: -3px;
 				font-size: 0.75rem;
 				color: ${lightGray};
 			}
+
 		}
 
 		.placeholder {
