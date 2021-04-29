@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 // import { Button } from '@material-ui/core';
 import OptForm from './OptForm'
+// import SignIn from '../pages/SignIn'
 
 const Header = () => {
 	return (
+		<>
 		<StyledStoryCard>
 			<h1 className='title'>
 				Online Review for <span>Board Exam.</span> 
@@ -19,6 +21,8 @@ const Header = () => {
 				<OptForm/>
 			</div>
 		</StyledStoryCard>
+		{/* <SignIn/> */}
+		</>
 	)
 }
 
