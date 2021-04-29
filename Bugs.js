@@ -1,5 +1,5 @@
 
-`Problem with placeholder, kapag naload ang saved email or password, nagooverlap```
+// `Problem with placeholder, kapag naload ang saved email or password, nagooverlap```
 
 `if irefresh ang sign in or sign up page, ga error page not found, 404 error. https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
 
@@ -14,7 +14,7 @@ import { HashRouter } from 'react-router-dom'
   <App/>
 </HashRouter>
 Reference: HashRouter
-`
+```
 
 
 // Signin.js

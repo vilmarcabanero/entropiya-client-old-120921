@@ -20,7 +20,7 @@ export default function SignUp() {
 
 				<div className='flex'>
 					<label class='custom-input'>
-						<input className='firstname' required />
+						<input className='firstname' placeholder='' required />
 						<span className='placeholder'>First name</span>
 					</label>
 					<label class='custom-input'>
@@ -31,7 +31,7 @@ export default function SignUp() {
 
 				<div className='password-container'>
 					<label class='custom-input'>
-						<input className='password' type={PasswordInputType} required />
+						<input className='password' placeholder='' type={PasswordInputType} required />
 						<span className='placeholder'>Password</span>
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
