@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaAngleDown } from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 
 const OptForm = () => {
 	return (
@@ -13,9 +14,9 @@ const OptForm = () => {
 						</label>
 
 						<div class='button-container'>
-							<button type='submit' class='submit'>
+							<Link to='/signup' class='button'>
 								Enroll now <FaAngleDownRight className='arrow' />
-							</button>
+							</Link>
 						</div>
 					</div>
 		</StyledOptForm>
@@ -95,9 +96,12 @@ const StyledOptForm = styled.div`
 			}
 		}
 
-		button {
+		.button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			color: white;
-			text-align: center;
+			text-decoration: none;
 			cursor: pointer;
 			// width: 140px;
 			width: 10.5rem;
@@ -134,6 +138,7 @@ const StyledOptForm = styled.div`
 			.arrow {
 				font-size: 1.25rem;
 				color: white;
+				margin-top: 0.3rem;
 				transform-origin: center center;
 				transform: rotate(-90deg);
 			}

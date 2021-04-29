@@ -5,3 +5,5 @@ Breakpoints
 // Note palitan ko to ng logo ng Entropiya? With different sizes.  Na nasa manifest.json
 
 FaChevronDown
+
+'Problem with placeholder, kapag naload ang saved email or password, nagooverlap'

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import EntropiyaLogo from './EntropiyaLogo'
+import EntropiyaLogo from '../Home/EntropiyaLogo'
 // import { Button } from '@material-ui/core';
 import {Link} from 'react-router-dom'
 
@@ -7,7 +7,6 @@ const Header = () => {
 	return (
 		<StyledHeader>
 			<EntropiyaLogo />
-			<Link to='/signin' className='button'>Sign in</Link>
 		</StyledHeader>
 	)
 }

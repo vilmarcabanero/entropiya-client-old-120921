@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import logo from '../../assets/images/header3.png'
+import {Link} from 'react-router-dom'
 
 const EntropiyaLogo = () => {
 	return (
 		<StyledLogo>
-			<a href='/'>
+			<Link to='/'>
         <img src={logo} alt='Logo' />
-			</a>
+			</Link>
 		</StyledLogo>
 	)
 }

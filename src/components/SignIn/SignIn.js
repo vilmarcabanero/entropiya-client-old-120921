@@ -1,6 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
+import Header from './Header'
 
 const darkGray = '#A9A9A9'
 const gray = '808080'
@@ -12,6 +14,7 @@ export default function SignIn() {
 
 	return (
 		<>
+		<Header/>
 			<Styled>
 				<h1>Sign in</h1>
 				<div className='flex'>
@@ -33,7 +36,7 @@ export default function SignIn() {
 				</a>
 				<button>Sign in</button>
 				<div className='new'>
-					<span>New to Entropiya? </span> <a href='/'> Sign up now</a>
+					<span>New to Entropiya? </span> <Link to='/signup'> Sign up now</Link>
 				</div>
 			</Styled>
 		</>

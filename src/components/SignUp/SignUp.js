@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
+import {Link} from 'react-router-dom'
+import Header from './Header'
 
 const darkGray = '#A9A9A9'
 const gray = '808080'
@@ -12,6 +14,7 @@ export default function SignUp() {
 
 	return (
 		<>
+		<Header/>
 			<Styled>
 				<h1>Create an account</h1>
 
@@ -35,7 +38,7 @@ export default function SignUp() {
 				</div>
 				<button>Sign up</button>
 				<div className='already'>
-					<span>Already have an account? </span> <a href='/'> Sign in</a>
+					<span>Already have an account? </span> <Link to='/signin'> Sign in</Link>
 				</div>
 			</Styled>
 		</>

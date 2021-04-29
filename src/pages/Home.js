@@ -6,7 +6,7 @@ const App = () => {
 	return (
 		<div>
 			{/* <ParticleBackground /> */}
-			{/* <Header /> */}
+			<Header />
 			<StoryCard />
 		</div>
 	)

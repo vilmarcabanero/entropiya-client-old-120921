@@ -1,2 +1,8 @@
 
 'Problem with placeholder, kapag naload ang saved email or password, nagooverlap'
+
+Signin.js
+Problem with deployment, hindi pala na update sa github, yung filename, instead na SignIn.js, Signin lang kaya pala hindi makita ni Netlify. 
+
+11:03:56 PM: ./src/App.js
+11:03:56 PM: Cannot find file './pages/SignIn' in './src'.
