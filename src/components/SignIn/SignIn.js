@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import usePasswordToggle from '../hooks/usePasswordToggle'
+import usePasswordToggle from './usePasswordToggle'
 
 const darkGray = '#A9A9A9'
 const gray = '808080'
