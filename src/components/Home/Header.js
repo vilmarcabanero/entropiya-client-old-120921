@@ -62,8 +62,8 @@ const StyledHeader = styled.nav`
 			right: 1rem;
 		}
 		&:hover {
-			color: #06f;
-			background-color: white;
+			color: white;
+			background-color: transparent;
 			border-color: #06f;
 		}
 

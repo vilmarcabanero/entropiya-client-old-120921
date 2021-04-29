@@ -3,8 +3,7 @@ import './App.scss'
 import ParticleBackground from './components/Particles/ParticleBackground'
 import Header from './components/Home/Header'
 import Home from './pages/Home'
-import SignUp from './pages/SignUp'
-import SignIn from './components/SignIn/SignIn'
+import SignUp from './components/SignUp/SignUp'
 
 const App = () => {
 	return (
@@ -15,7 +14,8 @@ const App = () => {
 			</div> */}
 			<ParticleBackground/>
 			<Header />
-			<SignIn/>
+			<SignUp/>
+			{/* <Home/> */}
 			{/* <Header /> */}
 			{/* <Switch>
 				<Route exact path='/' component={SignIn} />

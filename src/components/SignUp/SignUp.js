@@ -7,17 +7,22 @@ const gray = '808080'
 const lightGray = '#D3D3D3'
 const gainsboro = '#DCDCDC'
 
-export default function SignIn() {
+export default function SignUp() {
 	const [PasswordInputType, ToggleIcon] = usePasswordToggle()
 
 	return (
 		<>
 			<Styled>
-				<h1>Sign in</h1>
+				<h1>Create an account</h1>
+
 				<div className='flex'>
 					<label class='custom-input'>
 						<input className='firstname' required />
-						<span className='placeholder'>Email address</span>
+						<span className='placeholder'>First name</span>
+					</label>
+					<label class='custom-input'>
+						<input className='lastname' required />
+						<span className='placeholder'>Last name</span>
 					</label>
 				</div>
 
@@ -28,12 +33,9 @@ export default function SignIn() {
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
-				<a href='/' className='forgot-password'>
-					Forgot password?
-				</a>
-				<button>Sign in</button>
-				<div className='new'>
-					<span>New to Entropiya? </span> <a href='/'> Sign up now</a>
+				<button>Sign up</button>
+				<div className='already'>
+					<span>Already have an account? </span> <a href='/'> Sign in</a>
 				</div>
 			</Styled>
 		</>
@@ -56,7 +58,7 @@ const Styled = styled.div`
 	border-radius: 5px;
 
 	margin: 2rem auto;
-	padding: 4rem 3rem 5rem 3rem;
+	padding: 4rem 3rem 4rem 3rem;
 
 	/* background-color: #262626; */
 	/* background-color: rgba(38, 38, 38, 0.75); */
@@ -168,6 +170,7 @@ const Styled = styled.div`
 		color: white;
 		margin-right: auto;
 		margin-left: auto;
+		margin-top: 1rem;
 		font-size: 1.2rem;
 		background-color: #06f;
 		border: 1px solid #06f;
@@ -181,26 +184,9 @@ const Styled = styled.div`
 
 	//End
 
-	.forgot-password {
-		align-self: flex-start;
-		margin-top: -1rem;
-		padding-top: 1rem;
-		margin-bottom: 1rem;
-		padding-bottom: 1rem;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-		text-decoration: none;
-		color: white;
-		font-weight: 550;
-		&:hover {
-			opacity: 0.75;
-		}
-	}
-
-	.new {
-		padding-top: 1rem;
-		padding-right: 0.75rem;
+	.already {
 		align-self: flex-end;
+		margin-top: 1.25rem;
 		> a {
 			text-decoration: none;
 			color: white;
