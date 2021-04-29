@@ -1,44 +1,45 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { InputBase, Button } from '@material-ui/core'
 import styled from 'styled-components'
-import usePasswordToggle from '../hooks/usePasswordToggle'
-import ParticleBackground from '../components/Particles/ParticleBackground'
-import Header from '../components/Home/Header'
+import usePasswordToggle from './usePasswordToggle'
 
 const darkGray = '#A9A9A9'
 const gray = '808080'
 const lightGray = '#D3D3D3'
 const gainsboro = '#DCDCDC'
 
-export default function SignIn() {
+export default function SignUp() {
 	const [PasswordInputType, ToggleIcon] = usePasswordToggle()
 
 	return (
 		<>
-			{/* <ParticleBackground /> */}
-			{/* <Header /> */}
-
 			<Styled>
-				<h1>Sign in</h1>
-				<div className='flex'>
-					<label class='custom-input'>
-						<input className='firstname' required />
-						<span className='placeholder'>Email address</span>
-					</label>
-				</div>
+				<h1>Create an account</h1>
+					<div className='flex'>
+						<label class='custom-input'>
+							<input className='firstname' required />
+							<span className='placeholder'>First name</span>
+						</label>
+						<label class='custom-input'>
+							<input className='lastname' required />
+							<span className='placeholder'>Last name</span>
+						</label>
+					</div>
 
-				<div className='password-container'>
-					<label class='custom-input'>
-						<input className='password' type={PasswordInputType} required />
-						<span className='placeholder'>Password</span>
-					</label>
-					<div className='visibility'>{ToggleIcon}</div>
-				</div>
-				<a href='/' className='forgot-password'>
-					Forgot password?
-				</a>
-				<button>Sign in</button>
-				<div className='new'>
-					<span>New to Entropiya? </span> <a href='/'> Sign up now</a>
+					<div className='password-container'>
+						<label class='custom-input'>
+							<input className='password' type={PasswordInputType} required />
+							<span className='placeholder'>Password</span>
+						</label>
+						<div className='visibility'>{ToggleIcon}</div>
+					</div>
+
+					<button>Sign up</button>
+				<div>
+					<div>
+						<span>Already have an account? </span> <a href='/'> Sign in</a>
+					</div>
 				</div>
 			</Styled>
 		</>
@@ -51,7 +52,7 @@ const Styled = styled.div`
 	/* width: 40rem; */
 	/* width: 28rem; //sing in page */
 	/* height: 40rem; */
-	width: 32.75rem;
+	width: 25rem;
 	padding-left: 4rem;
 	padding-right: 4rem;
 	padding-top: 3rem;
@@ -63,14 +64,13 @@ const Styled = styled.div`
 	align-items: flex-start;
 	/* background-color: #262626; */
 	/* background-color: rgba(38, 38, 38, 0.75); */
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 
 	@media (max-width: 46rem) {
 		& {
-			width: 29.5rem;
+			width: 22.5rem;
 			position: relative;
-
 			margin-top: 3rem;
 			margin-bottom: 1.5rem;
 			margin-left: auto;
@@ -78,26 +78,6 @@ const Styled = styled.div`
 		}
 	}
 
-	.input {
-		width: 100%;
-		position: relative;
-
-		@media (max-width: 30rem) {
-			width: 40ch;
-		}
-
-		.visibility {
-			/* margin-bottom: 2.25rem; */
-			padding: 0.5rem;
-			position: absolute;
-			top: 4rem;
-			right: 0rem;
-			cursor: pointer;
-			z-index: 5;
-		}
-	}
-
-	//begin
 	h1 {
 		font-size: 2rem;
 		margin-bottom: 2.5rem;
@@ -170,6 +150,7 @@ const Styled = styled.div`
 		align-items: center;
 		width: inherit;
 
+		
 		width: 24.5rem;
 		@media (max-width: 46rem) {
 			& {
@@ -178,18 +159,20 @@ const Styled = styled.div`
 		}
 
 		.visibility {
-			margin-bottom: 2.5rem;
+			margin-bottom: 3.5rem;
 			padding: 0.5rem 0 0.5rem 0;
 			position: absolute;
 			right: 0rem;
 			cursor: pointer;
 			z-index: 20;
 		}
+
+		
 	}
 
 	button {
 		height: 2.75rem;
-		width: 24.5rem;
+		width: 25rem;
 		color: white;
 		margin-right: auto;
 		margin-left: auto;
@@ -210,31 +193,18 @@ const Styled = styled.div`
 		}
 	}
 
-	//End
-
-	.forgot-password {
-		align-self: flex-start;
-		margin-top: -1rem;
-		margin-bottom: 2rem;
-		margin-left: 1rem;
-		text-decoration: none;
-		color: white;
-		font-weight: 550;
-		&:hover {
-			opacity: 0.75;
-		}
-	}
-
-	.new {
-		margin-top: 1rem;
-		margin-right: 0.75rem;
-		align-self: flex-end;
-		> a {
-			text-decoration: none;
-			color: white;
-			font-weight: 550;
-			&:hover {
-				opacity: 0.75;
+	> div {
+		> div {
+			position: absolute;
+			right: 4.5rem;
+			margin-top: 0.75rem;
+			> a {
+				text-decoration: none;
+				color: white;
+				font-weight: 550;
+				&:hover {
+					opacity: 0.75;
+				}
 			}
 		}
 	}

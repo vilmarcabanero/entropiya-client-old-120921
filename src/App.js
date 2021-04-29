@@ -1,15 +1,29 @@
+import {NavLink, Switch, Route } from 'react-router-dom'
 import './App.scss'
 import ParticleBackground from './components/Particles/ParticleBackground'
 import Header from './components/Home/Header'
-import StoryCard from './components/Home/StoryCard'
+import Home from './pages/Home'
+import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
 
 const App = () => {
 	return (
-		<div>
+		<>
+			{/* <div className='nav'>
+				<NavLink exact to='/' activeClassName='active'>Home</NavLink>
+				<NavLink exact to='/about' activeClassName='active'>About</NavLink>
+			</div> */}
+			{/* <ParticleBackground/>
+			<Header />
+			<StoryCard/> */}
 			<ParticleBackground/>
 			<Header />
-			<StoryCard/>
-		</div>
+			<Switch>
+				<Route exact path='/' component={Home}/>
+				<Route exact path='/signup' component={SignUp}/>
+				<Route exact path='/signin' component={SignIn}/>
+			</Switch>
+		</>
 	)
 }
 
