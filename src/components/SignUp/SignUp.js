@@ -73,7 +73,8 @@ const Styled = styled.div`
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 		margin: 0rem 0;
-		background-color: rgba(0, 0, 0, 0.2);
+		padding-top: 0rem;
+		background-color: transparent;
 	}
 
 	//begin
