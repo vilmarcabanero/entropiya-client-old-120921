@@ -14,7 +14,7 @@ const EntropiyaLogo = () => {
 const StyledLogo = styled.div`
 	> a {
 		> img {
-			height: 4rem;
+			height: 3.7rem;
 
       &:hover {
         opacity: 0.9;
