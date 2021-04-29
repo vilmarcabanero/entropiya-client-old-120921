@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
 import Header from './Header'
@@ -14,7 +14,7 @@ export default function SignIn() {
 
 	return (
 		<>
-		<Header/>
+			<Header />
 			<Styled>
 				<h1>Sign in</h1>
 				<div className='flex'>
@@ -26,7 +26,12 @@ export default function SignIn() {
 
 				<div className='password-container'>
 					<label class='custom-input'>
-						<input className='password' placeholder='' type={PasswordInputType} required />
+						<input
+							className='password'
+							placeholder=''
+							type={PasswordInputType}
+							required
+						/>
 						<span className='placeholder'>Password</span>
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
@@ -123,14 +128,17 @@ const Styled = styled.div`
 			border-left: none;
 			border-right: none;
 
-		
+			&::-ms-reveal,
+			&::-ms-clear {
+				display: none;
+			}
+
 			&:valid + .placeholder,
 			&:focus + .placeholder {
 				top: -3px;
 				font-size: 0.75rem;
 				color: ${lightGray};
 			}
-
 		}
 
 		.placeholder {

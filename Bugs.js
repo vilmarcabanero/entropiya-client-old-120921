@@ -1,5 +1,7 @@
 
-// `Problem with placeholder, kapag naload ang saved email or password, nagooverlap```
+// `Problem with placeholder, kapag naload ang saved email or password, nagooverlap``` basically, gumana siya if from home page ka, then naka save na data, pag punta mo sa sign or sign up, since walang reload na nangyari, matic na aangat yung place holder, pero once ireload mo mismo sa site, saka na hindi gumagana. 
+
+
 
 `if irefresh ang sign in or sign up page, ga error page not found, 404 error. https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
 

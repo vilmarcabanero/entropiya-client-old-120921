@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Header from './Header'
 
 const darkGray = '#A9A9A9'
@@ -14,7 +14,7 @@ export default function SignUp() {
 
 	return (
 		<>
-		<Header/>
+			<Header />
 			<Styled>
 				<h1>Create an account</h1>
 
@@ -31,14 +31,20 @@ export default function SignUp() {
 
 				<div className='password-container'>
 					<label class='custom-input'>
-						<input className='password' placeholder='' type={PasswordInputType} required />
+						<input
+							className='password'
+							placeholder=''
+							type={PasswordInputType}
+							required
+						/>
 						<span className='placeholder'>Password</span>
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
 				<button>Sign up</button>
 				<div className='already'>
-					<span>Already have an account? </span> <Link to='/signin'> Sign in</Link>
+					<span>Already have an account? </span>{' '}
+					<Link to='/signin'> Sign in</Link>
 				</div>
 			</Styled>
 		</>
@@ -124,6 +130,11 @@ const Styled = styled.div`
 			border-top: none;
 			border-left: none;
 			border-right: none;
+
+			&::-ms-reveal,
+			&::-ms-clear {
+				display: none;
+			}
 
 			&:valid + .placeholder,
 			&:focus + .placeholder {
