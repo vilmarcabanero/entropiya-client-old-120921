@@ -35,7 +35,6 @@ export default function SignIn() {
 						/>
 						<span className='placeholder'>Password</span>
 					</label>
-					<Visibility className='visibility' />
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
 				<a href='/' className='forgot-password'>
@@ -92,6 +91,7 @@ const Styled = styled.div`
 		margin-left: 0.5rem;
 		margin-bottom: 1.75rem;
 		align-self: flex-start;
+		cursor: text;
 		@media (max-width: 30rem) {
 			font-size: 1.75rem;
 			padding-left: 0.5rem;
@@ -171,8 +171,13 @@ const Styled = styled.div`
 		width: 100%;
 
 		.visibility {
-			padding: 1rem 0.5rem 1rem 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0rem 0.5rem 1.1rem 1rem;
+
 			position: absolute;
+			width: 1rem;
 			color: gray;
 			opacity: 1.5;
 			right: 0rem;
@@ -225,10 +230,11 @@ const Styled = styled.div`
 		padding-top: 1rem;
 		padding-right: 0.75rem;
 		align-self: flex-end;
+		cursor: text;
 		.link {
 			text-decoration: none;
 			color: white;
-			font-weight: 600;
+			font-weight: bold;
 			padding-bottom: 0.1rem;
 			&:hover {
 				opacity: 0.75;

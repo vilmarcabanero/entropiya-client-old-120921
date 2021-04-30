@@ -97,6 +97,7 @@ const Styled = styled.div`
 			padding-left: 0.5rem;
 			margin: 0 0 0.5rem 0;
 		}
+		cursor: text;
 	}
 	.custom-input {
 		position: relative;
@@ -214,10 +215,11 @@ const Styled = styled.div`
 	.already {
 		align-self: flex-end;
 		margin-top: 1.25rem;
+		cursor: text;
 		.link {
 			text-decoration: none;
 			color: white;
-			font-weight: 600;
+			font-weight: bold;
 			padding-bottom: 0.1rem;
 			&:hover {
 				opacity: 0.75;
