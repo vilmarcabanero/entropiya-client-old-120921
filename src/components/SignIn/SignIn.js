@@ -40,7 +40,9 @@ export default function SignIn() {
 				<a href='/' className='forgot-password'>
 					Forgot password?
 				</a>
-				<button>Sign in</button>
+				<Link to='/quiz' className='button'>
+					Sign in
+				</Link>
 				<div className='new'>
 					<span>New to Entropiya? </span>{' '}
 					<Link className='link' to='/'>
@@ -191,7 +193,11 @@ const Styled = styled.div`
 		}
 	}
 
-	button {
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
 		height: 2.75rem;
 		width: 100%;
 		color: white;

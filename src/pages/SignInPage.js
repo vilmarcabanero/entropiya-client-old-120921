@@ -15,7 +15,6 @@ const App = () => {
 
 				<SignIn />
 				<br></br><br></br>
-				<Mathjax/>
 			</div>
 		</motion.div>
 	)

@@ -41,7 +41,7 @@ export default function SignUp() {
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
-				<button className='button'>Sign up</button>
+				<Link to='/quiz' className='button'>Sign up</Link>
 				<div className='already'>
 					<span>Already have an account? </span>{' '}
 					<Link to='/signin' className='link'>
@@ -193,6 +193,10 @@ const Styled = styled.div`
 	}
 
 	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
 		height: 2.75rem;
 		width: 100%;
 		color: white;

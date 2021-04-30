@@ -23,5 +23,6 @@ const StyledParticles = styled.div`
 
 	.particles {
 		width: 100%;
+		height: 110vh;
 	}
 `

@@ -1,13 +1,24 @@
 import { useEffect, useState } from 'react'
 import { econ } from '../../data/econ'
-import MathJax from 'react-mathjax2'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
 // import parse from 'html-react-parser'
 
+const config = {
+	loader: { load: ['[tex]/html'] },
+	tex: {
+		packages: { '[+]': ['html'] },
+		inlineMath: [
+			['$', '$'],
+			['\\(', '\\)'],
+		],
+		displayMath: [
+			['$$', '$$'],
+			['\\[', '\\]'],
+		],
+	},
+}
 
 const Quiz = () => {
-
-
-	
 	const [categories, setCategories] = useState([])
 	const fetchQuizCategories = () => {
 		const formattedData = econ.map(category => {
@@ -30,8 +41,11 @@ const Quiz = () => {
 
 	// return <div>{parse(results[0].question)}</div>
 	return (
-
-	<div dangerouslySetInnerHTML={{ __html: econ[0].question }}></div>
+		<MathJaxContext version={3} config={config}>
+			<MathJax hideUntilTypeset={'first'}>
+				<div dangerouslySetInnerHTML={{ __html: econ[0].question }}></div>
+			</MathJax>
+		</MathJaxContext>
 	)
 }
 
