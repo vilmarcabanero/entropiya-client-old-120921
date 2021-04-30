@@ -18,8 +18,8 @@ const App = () => {
 				<NavLink exact to='/about' activeClassName='active'>About</NavLink>
 			</div> */}
 			<ParticleBackground />
-			<AnimatePresence>
-				<Switch >
+			<AnimatePresence exitBeforeEnter>
+				<Switch location={location} key={location.pathname}>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/signup' component={SignUp} />
 					<Route exact path='/signin' component={SignIn} />
