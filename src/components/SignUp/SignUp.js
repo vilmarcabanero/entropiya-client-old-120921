@@ -41,7 +41,7 @@ export default function SignUp() {
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
-				<button>Sign up</button>
+				<button className='button'>Sign up</button>
 				<div className='already'>
 					<span>Already have an account? </span>{' '}
 					<Link to='/signin' className='link'>
@@ -191,7 +191,7 @@ const Styled = styled.div`
 		}
 	}
 
-	button {
+	.button {
 		height: 2.75rem;
 		width: 100%;
 		color: white;
@@ -224,4 +224,12 @@ const Styled = styled.div`
 			}
 		}
 	}
+
+	//Noselect
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 `

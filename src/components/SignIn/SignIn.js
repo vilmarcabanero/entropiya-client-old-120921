@@ -35,15 +35,19 @@ export default function SignIn() {
 						/>
 						<span className='placeholder'>Password</span>
 					</label>
-					<Visibility className='visibility'/> 
-					<div className='visibility'>{ToggleIcon} <Visibility className='visibility'/> </div>
+					<Visibility className='visibility' />
+					<div className='visibility'>{ToggleIcon}</div>
 				</div>
 				<a href='/' className='forgot-password'>
 					Forgot password?
 				</a>
 				<button>Sign in</button>
 				<div className='new'>
-					<span>New to Entropiya? </span> <Link className='link' to='/'> Sign up now</Link>
+					<span>New to Entropiya? </span>{' '}
+					<Link className='link' to='/'>
+						{' '}
+						Sign up now
+					</Link>
 				</div>
 			</Styled>
 		</>
@@ -175,6 +179,10 @@ const Styled = styled.div`
 			bottom: 0.6rem;
 			cursor: pointer;
 			z-index: 20;
+
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 	}
 
@@ -227,4 +235,12 @@ const Styled = styled.div`
 			}
 		}
 	}
+
+	//Noselect
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 `
