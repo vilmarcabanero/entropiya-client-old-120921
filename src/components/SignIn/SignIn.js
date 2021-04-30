@@ -18,14 +18,14 @@ export default function SignIn() {
 			<Styled>
 				<h1>Sign in</h1>
 				<div className='flex'>
-					<label class='custom-input'>
+					<label className='custom-input'>
 						<input className='firstname' placeholder='' required />
 						<span className='placeholder'>Email address</span>
 					</label>
 				</div>
 
 				<div className='password-container'>
-					<label class='custom-input'>
+					<label className='custom-input'>
 						<input
 							className='password'
 							placeholder=''

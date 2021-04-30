@@ -6,15 +6,15 @@ import {Link} from 'react-router-dom'
 const OptForm = () => {
 	return (
 		<StyledOptForm>
-					<div class='input-button-group'>
+					<div className='input-button-group'>
 						<label>
-							<input type='text' class='form-control' id='' required />
+							<input type='text' className='form-control' id='' required />
 
 							<span className='placeholder'>Email address</span>
 						</label>
 
-						<div class='button-container'>
-							<Link to='/signup' class='button'>
+						<div className='button-container'>
+							<Link to='/signup' className='button'>
 								Enroll now <FaAngleDownRight className='arrow' />
 							</Link>
 						</div>

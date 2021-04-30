@@ -14,6 +14,7 @@
     "@types/react-dom": "^17.0.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "framer-motion": "^4.1.11",
     "jquery": "^3.6.0",
     "material-ui-password-field": "^2.1.2",
     "mathjax-react": "^1.0.6",
