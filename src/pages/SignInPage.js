@@ -1,6 +1,7 @@
 import SignIn from '../components/SignIn/SignIn'
 import EntropiyaLogo from '../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
+import Mathjax from '../components/Quiz/Mathjax'
 
 const App = () => {
 	return (
@@ -13,6 +14,8 @@ const App = () => {
 			<div>
 
 				<SignIn />
+				<br></br><br></br>
+				<Mathjax/>
 			</div>
 		</motion.div>
 	)

@@ -5,7 +5,9 @@ import MathJax from 'react-mathjax2'
 
 
 const Quiz = () => {
-	// const tex = `f(x) = \\int_{-\\infty}^\\infty\\hat f(\\xi)\\,e^{2 \\pi i \\xi x}\\,d\\xi`
+
+
+	
 	const [categories, setCategories] = useState([])
 	const fetchQuizCategories = () => {
 		const formattedData = econ.map(category => {
@@ -28,12 +30,8 @@ const Quiz = () => {
 
 	// return <div>{parse(results[0].question)}</div>
 	return (
-		// <MathJax.Context input='tex'>
-                <div>
-                    {/* This is an inline math formula: <MathJax.Node inline>{'a = b'}</MathJax.Node> */}
-                </div>
-            // </MathJax.Context>
-	// <div dangerouslySetInnerHTML={{ __html: econ[0].question }}></div>
+
+	<div dangerouslySetInnerHTML={{ __html: econ[0].question }}></div>
 	)
 }
 

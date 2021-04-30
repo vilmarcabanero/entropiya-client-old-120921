@@ -1,16 +1,17 @@
 // `\\(  \\frac{x+y}{x-y}  \\)`
+import {M} from '../components/Math'
 
 let pi = `\\(\\pi\\)`
 let theta = `\\(\\theta\\)`
 let fraction = `\\(  \\frac{x+y}{x-y}  \\)`
-
+let math = `${<M m='\pi'/>}`
 let area = `\\(A = \\pi r^2\\)`
 export const econ = [
 	{
 		category: `Science: Mathematics`,
 		type: 'multiple',
 		difficulty: 'easy',
-		question: `What is the area of the circle? ${area} <br> <h1>What is the symbol of pi? ${pi} </h1>  theta = ${theta} <br> <h2> ${fraction} <h2/>`,
+		question: `What is the area of the circle? ${area} <br> <h1>What is the symbol of pi? ${math} ${pi} </h1>  theta = ${theta} <br> <h2> ${fraction} <h2/>`,
 		correct_answer: '40',
 		incorrect_answers: ['60', '15', '90'],
 	},
