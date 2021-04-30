@@ -1,12 +1,15 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons'
 
 import { useState } from 'react'
 const usePasswordToggle = () => {
 	const [visible, setVisiblity] = useState(false)
 
 	const Icon = (
-		<span onClick={() => setVisiblity(visiblity => !visiblity)}>
-			{visible ? 'Hide' : 'Show'}
-		</span>
+		<div onClick={() => setVisiblity(visiblity => !visiblity)}>
+			<i class="fa fa-spinner fa-spin"></i>
+			{visible ? <FontAwesomeIcon className='eye' icon={faEye} /> : <FontAwesomeIcon  className='eye' icon={faEyeSlash} />}
+		</div>
 	)
 
 	const InputType = visible ? 'text' : 'password'

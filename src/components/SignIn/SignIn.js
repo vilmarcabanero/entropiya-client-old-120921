@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Visibility, VisibilityOff } from '@material-ui/icons'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
 import Header from './Header'
 
@@ -34,7 +35,8 @@ export default function SignIn() {
 						/>
 						<span className='placeholder'>Password</span>
 					</label>
-					<div className='visibility'>{ToggleIcon}</div>
+					<Visibility className='visibility'/> 
+					<div className='visibility'>{ToggleIcon} <Visibility className='visibility'/> </div>
 				</div>
 				<a href='/' className='forgot-password'>
 					Forgot password?

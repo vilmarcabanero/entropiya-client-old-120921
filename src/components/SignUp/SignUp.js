@@ -44,7 +44,10 @@ export default function SignUp() {
 				<button>Sign up</button>
 				<div className='already'>
 					<span>Already have an account? </span>{' '}
-					<Link to='/signin' className='link'> Sign in</Link>
+					<Link to='/signin' className='link'>
+						{' '}
+						Sign in
+					</Link>
 				</div>
 			</Styled>
 		</>
@@ -168,14 +171,23 @@ const Styled = styled.div`
 		width: 100%;
 
 		.visibility {
-			padding: 1rem 0.5rem 1rem 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0rem 0.5rem 1.1rem 1rem;
+
 			position: absolute;
+			width: 1rem;
 			color: gray;
 			opacity: 1.5;
 			right: 0rem;
 			bottom: 0.6rem;
 			cursor: pointer;
 			z-index: 20;
+
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 	}
 
