@@ -114,6 +114,15 @@ const StyledOptForm = styled.div`
 
 			font-size: 1.3rem;
 
+			&:hover {
+					background-color: transparent;
+					border: 1px solid #06f;
+					color: #06f;
+					.arrow {
+						color: #06f;
+					}
+				}
+
 			@media (max-width: 30rem) {
 				width: 7.6rem;
 				height: 2rem;
@@ -124,16 +133,9 @@ const StyledOptForm = styled.div`
 				}
 			}
 
-			@media (min-width: 30rem) {
-				&:hover {
-					background-color: transparent;
-					border: 1px solid #06f;
-					color: #06f;
-					.arrow {
-						color: #06f;
-					}
-				}
-			}
+			/* @media (min-width: 30rem) {
+
+			} */
 
 			.arrow {
 				font-size: 1.25rem;
