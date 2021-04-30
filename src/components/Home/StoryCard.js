@@ -34,7 +34,7 @@ const jetColor = '#343434'
 
 const StyledStoryCard = styled.nav`
 	position: relative;
-	top: 4rem;
+	top: 0rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

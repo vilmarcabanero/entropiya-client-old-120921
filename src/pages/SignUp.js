@@ -1,4 +1,5 @@
 import SignUp from '../components/SignUp/SignUp'
+import EntropiyaLogo from '../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
 
 const App = () => {
@@ -7,9 +8,11 @@ const App = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			transition={{duration: 0.25}}
+			transition={{ duration: 0.25 }}
 		>
 			<div>
+
+
 				<SignUp />
 			</div>
 		</motion.div>

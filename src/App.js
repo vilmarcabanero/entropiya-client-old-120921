@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 
 import ParticleBackground from './components/Particles/ParticleBackground'
 import Header from './components/Home/Header'
+import EntropiyaLogo from './components/Home/EntropiyaLogo'
 import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
@@ -18,6 +19,10 @@ const App = () => {
 				<NavLink exact to='/about' activeClassName='active'>About</NavLink>
 			</div> */}
 			<ParticleBackground />
+			<Header/>
+			<div className='header'>
+					<EntropiyaLogo />
+				</div>
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route exact path='/' component={Home} />

@@ -14,7 +14,7 @@ export default function SignIn() {
 
 	return (
 		<>
-			<Header />
+			{/* <Header /> */}
 			<Styled>
 				<h1>Sign in</h1>
 				<div className='flex'>

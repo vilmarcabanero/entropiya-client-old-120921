@@ -1,4 +1,5 @@
 import SignIn from '../components/SignIn/SignIn'
+import EntropiyaLogo from '../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
 			transition={{duration: 0.25}}
 		>
 			<div>
+
 				<SignIn />
 			</div>
 		</motion.div>

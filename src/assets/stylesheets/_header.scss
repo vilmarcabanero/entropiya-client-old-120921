@@ -1,17 +1,16 @@
-@import "variables";
+@import 'variables';
 
 .header {
 	position: relative;
-	display: flex;
-	justify-content: space-between;
+	// display: flex;
+	// justify-content: space-between;
 	align-items: center;
 
 	padding-top: 1rem;
 	padding-left: 2rem;
-	padding-right: 3rem;
+	// padding-right: 3rem;
 	width: 100%;
 
-  
 	@media (max-width: 76rem) {
 		width: 100%;
 		padding-left: 2rem;
@@ -25,11 +24,26 @@
 		padding-top: 0.75rem;
 	}
 
+	.home-logo {
+		> img {
+			height: 3.8rem;
+			&:hover {
+				opacity: 0.9;
+			}
 
+			@media (max-width: 30rem) {
+				height: 2.75rem;
+			}
+		}
+	}
 
-  .button {
+	.button {
+		position: absolute;
+		right: 3rem;
+		top: -3rem;
 		display: flex;
 		align-items: center;
+		justify-self: flex-end !important;
 		justify-content: center;
 		font-size: $font-a;
 		background-color: #06f;
@@ -42,6 +56,7 @@
 		@media (max-width: 46rem) {
 			position: absolute;
 			right: 1rem;
+			top: -3rem;
 		}
 		&:hover {
 			color: white;
@@ -52,6 +67,9 @@
 		@media (max-width: 30rem) {
 			font-size: 1rem;
 			height: 1.75rem;
+			position: absolute;
+			right: 1rem;
+			top: -2.25rem;
 		}
 	}
 }

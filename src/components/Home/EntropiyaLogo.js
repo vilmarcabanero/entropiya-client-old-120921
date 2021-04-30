@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 const EntropiyaLogo = () => {
 	return (
 		<StyledLogo>
-			<Link to='/'>
-				<img src={logo} alt='Logo' />
+			<Link to='/' className='home-logo'>
+				<img src={logo} alt='Logo'  />
 			</Link>
 		</StyledLogo>
 	)
 }
 
 const StyledLogo = styled.div`
-	> a {
+	.home-logo {
 		> img {
 			height: 3.8rem;
 			&:hover {

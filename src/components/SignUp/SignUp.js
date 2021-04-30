@@ -14,7 +14,7 @@ export default function SignUp() {
 
 	return (
 		<>
-			<Header />
+			{/* <Header /> */}
 			<Styled>
 				<h1>Create an account</h1>
 
