@@ -20,7 +20,7 @@ export default function SignIn() {
 				<h1>Sign in</h1>
 				<div className='flex'>
 					<label className='custom-input'>
-						<input className='firstname' placeholder='' required />
+						<input className='email' placeholder='' required />
 						<span className='placeholder'>Email address</span>
 					</label>
 				</div>
@@ -109,12 +109,8 @@ const Styled = styled.div`
 			cursor: text;
 		}
 
-		.firstname {
-			border-radius: 0 0 0 5px;
-		}
-
-		.lastname {
-			border-radius: 0 0 5px 0;
+		.email {
+			border-radius: 5px;
 		}
 
 		.password {
@@ -147,6 +143,7 @@ const Styled = styled.div`
 				font-size: 0.75rem;
 				color: ${lightGray};
 			}
+
 		}
 
 		.placeholder {
@@ -203,6 +200,7 @@ const Styled = styled.div`
 		color: white;
 		margin-right: auto;
 		margin-left: auto;
+		margin-top: 1rem;
 		font-size: 1.2rem;
 		background-color: #06f;
 		border: 1px solid #06f;
@@ -220,7 +218,6 @@ const Styled = styled.div`
 		align-self: flex-start;
 		margin-top: -1rem;
 		padding-top: 1rem;
-		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;

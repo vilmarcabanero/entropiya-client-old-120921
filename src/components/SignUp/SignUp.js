@@ -19,14 +19,18 @@ export default function SignUp() {
 				<h1>Create an account</h1>
 
 				<div className='flex'>
-					<label className='custom-input'>
+				<label className='custom-input'>
+						<input className='username' placeholder='' required />
+						<span className='placeholder'>Name</span>
+					</label>
+					{/* <label className='custom-input'>
 						<input className='firstname' placeholder='' required />
 						<span className='placeholder'>First name</span>
 					</label>
 					<label className='custom-input'>
 						<input className='lastname' required />
 						<span className='placeholder'>Last name</span>
-					</label>
+					</label> */}
 				</div>
 
 				<div className='password-container'>
@@ -108,12 +112,8 @@ const Styled = styled.div`
 			cursor: text;
 		}
 
-		.firstname {
-			border-radius: 0 0 0 5px;
-		}
-
-		.lastname {
-			border-radius: 0 0 5px 0;
+		.username {
+			border-radius: 5px;
 		}
 
 		.password {
