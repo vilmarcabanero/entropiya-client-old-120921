@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import logo from '../../assets/images/header3.png'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const EntropiyaLogo = () => {
 	return (
 		<StyledLogo>
 			<Link to='/'>
-        <img src={logo} alt='Logo' />
+				<img src={logo} alt='Logo' />
 			</Link>
 		</StyledLogo>
 	)
@@ -16,10 +16,9 @@ const StyledLogo = styled.div`
 	> a {
 		> img {
 			height: 3.8rem;
-
-      &:hover {
-        opacity: 0.9;
-      }
+			&:hover {
+				opacity: 0.9;
+			}
 
 			@media (max-width: 30rem) {
 				height: 2.75rem;

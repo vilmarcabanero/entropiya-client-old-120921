@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const Header = () => {
 	return (
 		<div className='header'>
-			<EntropiyaLogo />
+			<EntropiyaLogo className='home-logo'/>
 			<Link to='/signin' className='button'>Sign in</Link>
 		</div>
 	)

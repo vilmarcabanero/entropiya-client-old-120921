@@ -1,6 +1,7 @@
-import { NavLink, Switch, Route } from 'react-router-dom'
+import { NavLink, Switch, Route, useLocation } from 'react-router-dom'
 import './App.scss'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { AnimatePresence } from 'framer-motion'
 
 import ParticleBackground from './components/Particles/ParticleBackground'
 import Header from './components/Home/Header'
@@ -9,6 +10,7 @@ import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 
 const App = () => {
+	const location = useLocation()
 	return (
 		<>
 			{/* <div className='nav'>
@@ -16,11 +18,13 @@ const App = () => {
 				<NavLink exact to='/about' activeClassName='active'>About</NavLink>
 			</div> */}
 			<ParticleBackground />
-			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route exact path='/signup' component={SignUp} />
-				<Route exact path='/signin' component={SignIn} />
-			</Switch>
+			<AnimatePresence>
+				<Switch >
+					<Route exact path='/' component={Home} />
+					<Route exact path='/signup' component={SignUp} />
+					<Route exact path='/signin' component={SignIn} />
+				</Switch>
+			</AnimatePresence>
 		</>
 	)
 }
