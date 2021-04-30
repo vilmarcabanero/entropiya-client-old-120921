@@ -14,7 +14,9 @@ const Home = () => {
 		>
 			<div>
 				{/* <Header /> */}
-
+				<div className='header'>
+					<EntropiyaLogo />
+				</div>
 				<SignInButton/>
 				<StoryCard />
 			</div>

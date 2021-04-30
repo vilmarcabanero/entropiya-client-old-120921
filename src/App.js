@@ -20,9 +20,9 @@ const App = () => {
 			</div> */}
 			<ParticleBackground />
 			<Header/>
-			<div className='header'>
+			{/* <div className='header'>
 					<EntropiyaLogo />
-				</div>
+				</div> */}
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route exact path='/' component={Home} />
