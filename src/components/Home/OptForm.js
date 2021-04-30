@@ -58,7 +58,7 @@ const StyledOptForm = styled.div`
 					font-size: 0.95rem;
 					&:valid + .placeholder,
 					&:focus + .placeholder {
-						top: -1.5px;
+						top: 0px;
 						font-size: 0.65rem;
 						color: black;
 						opacity: 0.9;

@@ -64,14 +64,9 @@ const StyledStoryCard = styled.nav`
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
     margin: 0rem 0;
+		top: 2rem;
 	}
 
-	@media (max-width: 22.5rem) {
-		width: 100%;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-    margin: 0rem 0;
-	}
 
 	.title {
 		font-size: 4rem;
