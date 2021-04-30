@@ -41,7 +41,7 @@ export default function SignIn() {
 				</a>
 				<button>Sign in</button>
 				<div className='new'>
-					<span>New to Entropiya? </span> <Link to='/'> Sign up now</Link>
+					<span>New to Entropiya? </span> <Link className='link' to='/'> Sign up now</Link>
 				</div>
 			</Styled>
 		</>
@@ -215,10 +215,11 @@ const Styled = styled.div`
 		padding-top: 1rem;
 		padding-right: 0.75rem;
 		align-self: flex-end;
-		> a {
+		.link {
 			text-decoration: none;
 			color: white;
-			font-weight: 550;
+			font-weight: 600;
+			padding-bottom: 0.1rem;
 			&:hover {
 				opacity: 0.75;
 			}

@@ -44,7 +44,7 @@ export default function SignUp() {
 				<button>Sign up</button>
 				<div className='already'>
 					<span>Already have an account? </span>{' '}
-					<Link to='/signin'> Sign in</Link>
+					<Link to='/signin' className='link'> Sign in</Link>
 				</div>
 			</Styled>
 		</>
@@ -202,10 +202,11 @@ const Styled = styled.div`
 	.already {
 		align-self: flex-end;
 		margin-top: 1.25rem;
-		> a {
+		.link {
 			text-decoration: none;
 			color: white;
-			font-weight: 550;
+			font-weight: 600;
+			padding-bottom: 0.1rem;
 			&:hover {
 				opacity: 0.75;
 			}
