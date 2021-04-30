@@ -6,9 +6,10 @@ import { AnimatePresence } from 'framer-motion'
 import ParticleBackground from './components/Particles/ParticleBackground'
 import Header from './components/Home/Header'
 import EntropiyaLogo from './components/Home/EntropiyaLogo'
-import Home from './pages/Home'
-import SignUp from './pages/SignUp'
-import SignIn from './pages/SignIn'
+import HomePage from './pages/HomePage'
+import SignUpPage from './pages/SignUpPage'
+import SignInPage from './pages/SignInPage'
+import QuizPage from './pages/QuizPage'
 
 const App = () => {
 	const location = useLocation()
@@ -25,9 +26,10 @@ const App = () => {
 				</div> */}
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
-					<Route exact path='/' component={Home} />
-					<Route exact path='/signup' component={SignUp} />
-					<Route exact path='/signin' component={SignIn} />
+					<Route exact path='/' component={HomePage} />
+					<Route exact path='/signup' component={SignUpPage} />
+					<Route exact path='/signin' component={SignInPage} />
+					<Route exact path='/quiz' component={QuizPage} />
 				</Switch>
 			</AnimatePresence>
 		</>

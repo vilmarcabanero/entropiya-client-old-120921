@@ -14,9 +14,9 @@ const OptForm = () => {
 						</label>
 
 						<div className='button-container'>
-							<Link to='/signup' className='button'>
+							<a href='/quiz' className='button'>
 								Enroll now <FaAngleDownRight className='arrow' />
-							</Link>
+							</a>
 						</div>
 					</div>
 		</StyledOptForm>
