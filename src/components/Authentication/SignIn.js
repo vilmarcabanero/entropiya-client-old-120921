@@ -37,9 +37,9 @@ export default function SignIn() {
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
-				<a href='/' className='forgot-password'>
+				{/* <a href='/' className='forgot-password'>
 					Forgot password?
-				</a>
+				</a> */}
 				<Link to='/quiz' className='button'>
 					Sign in
 				</Link>

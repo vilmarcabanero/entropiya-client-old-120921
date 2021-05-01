@@ -23,7 +23,7 @@ const OptForm = () => {
 	)
 }
 
-const favBlueBackground = '#4398ff'
+// const favBlueBackground = '#4398ff'
 const jetColor = '#343434'
 
 const FaAngleDownRight = styled(FaAngleDown)``

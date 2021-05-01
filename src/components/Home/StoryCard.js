@@ -15,8 +15,8 @@ const Header = () => {
 			</h2>
 			<div className='form'>
 				<h3>
-					Ready to pass? Enter your email to start your{' '}
-					<span>30-day</span> free trial.
+					Ready to pass? Enter your email and try now  for free.
+					{/* <span>30-day</span> free trial. */}
 				</h3>
 				<OptForm/>
 			</div>
@@ -26,10 +26,10 @@ const Header = () => {
 	)
 }
 
-const primaryColor = '#0082e6'
-const fontA = '1.1rem'
-const containerColorBlack = '#262626'
-const jetColor = '#343434'
+// const primaryColor = '#0082e6'
+// const fontA = '1.1rem'
+// const containerColorBlack = '#262626'
+// const jetColor = '#343434'
 // const favBlueBackground = '#4398ff'
 
 const StyledStoryCard = styled.nav`
