@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import { AnimatePresence } from 'framer-motion'
 
 import ParticleBackground from './components/Particles/ParticleBackground'
+import NightModeBackground from './components/NightModeBackground'
 import Header from './components/Home/Header'
 import EntropiyaLogo from './components/Home/EntropiyaLogo'
 import HomePage from './pages/HomePage'
@@ -19,7 +20,8 @@ const App = () => {
 				<NavLink exact to='/' activeClassName='active'>Home</NavLink>
 				<NavLink exact to='/about' activeClassName='active'>About</NavLink>
 			</div> */}
-			<ParticleBackground />
+			{/* <ParticleBackground /> */}
+			<NightModeBackground/>
 			<Header/>
 			{/* <div className='header'>
 					<EntropiyaLogo />

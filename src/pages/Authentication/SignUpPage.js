@@ -1,6 +1,7 @@
 import SignUp from '../../components/Authentication/SignUp'
 import EntropiyaLogo from '../../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
+import Background from '../../components/Particles/Background'
 
 const App = () => {
 	return (
@@ -12,7 +13,7 @@ const App = () => {
 		>
 			<div>
 
-
+			<Background/>
 				<SignUp />
 			</div>
 		</motion.div>

@@ -2,6 +2,7 @@ import SignIn from '../../components/Authentication/SignIn'
 import EntropiyaLogo from '../../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
 import Mathjax from '../../components/Quiz/Mathjax'
+import Background from '../../components/Particles/Background'
 
 const App = () => {
 	return (
@@ -12,7 +13,7 @@ const App = () => {
 			transition={{duration: 0.25}}
 		>
 			<div>
-
+			<Background/>
 				<SignIn />
 				<br></br><br></br>
 			</div>

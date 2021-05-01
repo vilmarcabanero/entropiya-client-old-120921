@@ -2,6 +2,7 @@ import QuizCategories from '../../components/Quiz/QuizCategories'
 import Quiz from '../../components/Quiz/Quiz'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
+import Background from '../../components/Particles/Background'
 
 const QuizPage = () => {
 
@@ -14,6 +15,7 @@ const QuizPage = () => {
 			transition={{ duration: 0.25 }}
 		>
 			<div className='quiz'>
+			<Background/>
 				<StyledQuiz>
 					<QuizCategories />
 					<Quiz />

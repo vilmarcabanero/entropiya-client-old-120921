@@ -3,6 +3,7 @@ import EntropiyaLogo from '../components/Home/EntropiyaLogo'
 import SignInButton from '../components/Home/SignInButton'
 import StoryCard from '../components/Home/StoryCard'
 import { motion } from 'framer-motion'
+import ParticleBackground from '../components/Particles/ParticleBackground'
 
 const HomePage = () => {
 	return (
@@ -14,6 +15,7 @@ const HomePage = () => {
 		>
 			<div>
 				{/* <Header /> */}
+				<ParticleBackground />
 				<div className='header'>
 					<EntropiyaLogo />
 				</div>
