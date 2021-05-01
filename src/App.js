@@ -15,6 +15,11 @@ import ResetPasswordPage from './pages/Authentication/ResetPasswordPage'
 import QuizPage from './pages/Quiz/QuizPage'
 import LoadingPage from './pages/LoadingPage'
 
+//Routing
+import PrivateRoute from './routing/PrivateRoute'
+//Screens
+// import PrivatePage from './pages/PrivatePage'
+
 const App = () => {
 	const location = useLocation()
 	return (
@@ -31,12 +36,19 @@ const App = () => {
 				</div> */}
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
+					{/* <PrivateRoute exact path='/' component={PrivatePage}/> */}
+					
 					<Route exact path='/' component={HomePage} />
+					<PrivateRoute exact path='/quiz' component={QuizPage} />
 					<Route exact path='/register' component={RegisterPage} />
 					<Route exact path='/login' component={LoginPage} />
 					<Route exact path='/forgotpassword' component={ForgotPasswordPage} />
-					<Route exact path='/resetpassword' component={ResetPasswordPage} />
-					<Route exact path='/quiz' component={QuizPage} />
+					<Route
+						exact
+						path='/resetpassword/:resetToken'
+						component={ResetPasswordPage}
+					/>
+					
 					<Route exact path='/loading' component={LoadingPage} />
 				</Switch>
 			</AnimatePresence>
