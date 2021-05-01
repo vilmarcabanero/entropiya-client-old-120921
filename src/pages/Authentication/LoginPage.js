@@ -1,10 +1,9 @@
-import SignIn from '../../components/Authentication/SignIn'
+import SignIn from '../../components/Authentication/Login'
 import EntropiyaLogo from '../../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
-import Mathjax from '../../components/Quiz/Mathjax'
 import Background from '../../components/Particles/Background'
 
-const App = () => {
+const SignInPage = () => {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -21,4 +20,4 @@ const App = () => {
 	)
 }
 
-export default App
+export default SignInPage

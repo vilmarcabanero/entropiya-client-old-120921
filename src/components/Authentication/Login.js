@@ -1,7 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
-import { Link } from 'react-router-dom'
 import Header from './Header'
 
 const darkGray = '#A9A9A9'
@@ -9,28 +9,19 @@ const gray = '808080'
 const lightGray = '#D3D3D3'
 const gainsboro = '#DCDCDC'
 
-export default function SignUp() {
+export default function SignIn() {
 	const [PasswordInputType, ToggleIcon] = usePasswordToggle()
 
 	return (
 		<>
 			{/* <Header /> */}
 			<Styled>
-				<h1>Create an account</h1>
-
+				<h1>Sign in</h1>
 				<div className='flex'>
-				<label className='custom-input'>
-						<input className='username' placeholder='' required />
-						<span className='placeholder'>Name</span>
-					</label>
-					{/* <label className='custom-input'>
-						<input className='firstname' placeholder='' required />
-						<span className='placeholder'>First name</span>
-					</label>
 					<label className='custom-input'>
-						<input className='lastname' required />
-						<span className='placeholder'>Last name</span>
-					</label> */}
+						<input className='email' placeholder='' required />
+						<span className='placeholder'>Email address</span>
+					</label>
 				</div>
 
 				<div className='password-container'>
@@ -45,12 +36,17 @@ export default function SignUp() {
 					</label>
 					<div className='visibility'>{ToggleIcon}</div>
 				</div>
-				<Link to='/quiz' className='button'>Sign up</Link>
-				<div className='already'>
-					<span>Already have an account? </span>{' '}
-					<Link to='/signin' className='link'>
+				{/* <a href='/' className='forgot-password'>
+					Forgot password?
+				</a> */}
+				<Link to='/quiz' className='button'>
+					Sign in
+				</Link>
+				<div className='new'>
+					<span>New to Entropiya? </span>{' '}
+					<Link className='link' to='/'>
 						{' '}
-						Sign in
+						Sign up now
 					</Link>
 				</div>
 			</Styled>
@@ -74,7 +70,7 @@ const Styled = styled.div`
 	border-radius: 5px;
 
 	margin: 2rem auto;
-	padding: 4rem 3rem 4rem 3rem;
+	padding: 4rem 3rem 5rem 3rem;
 
 	/* background-color: #262626; */
 	/* background-color: rgba(38, 38, 38, 0.75); */
@@ -96,12 +92,12 @@ const Styled = styled.div`
 		margin-left: 0.5rem;
 		margin-bottom: 1.75rem;
 		align-self: flex-start;
+		cursor: text;
 		@media (max-width: 30rem) {
 			font-size: 1.75rem;
 			padding-left: 0.5rem;
 			margin: 0 0 0.5rem 0;
 		}
-		cursor: text;
 	}
 	.custom-input {
 		position: relative;
@@ -112,7 +108,7 @@ const Styled = styled.div`
 			cursor: text;
 		}
 
-		.username {
+		.email {
 			border-radius: 5px;
 		}
 
@@ -146,6 +142,7 @@ const Styled = styled.div`
 				font-size: 0.75rem;
 				color: ${lightGray};
 			}
+
 		}
 
 		.placeholder {
@@ -216,9 +213,25 @@ const Styled = styled.div`
 
 	//End
 
-	.already {
+	.forgot-password {
+		align-self: flex-start;
+		margin-top: -1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		text-decoration: none;
+		color: white;
+		font-weight: 550;
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+
+	.new {
+		padding-top: 1rem;
+		padding-right: 0.75rem;
 		align-self: flex-end;
-		margin-top: 1.25rem;
 		cursor: text;
 		.link {
 			text-decoration: none;
