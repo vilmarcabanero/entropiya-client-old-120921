@@ -17,8 +17,9 @@ import LoadingPage from './pages/LoadingPage'
 
 //Routing
 import PrivateRoute from './routing/PrivateRoute'
-//Screens
-// import PrivatePage from './pages/PrivatePage'
+
+//private pages
+import ProfilePage from './pages/ProfilePage'
 
 const App = () => {
 	const location = useLocation()
@@ -36,10 +37,7 @@ const App = () => {
 				</div> */}
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
-					{/* <PrivateRoute exact path='/' component={PrivatePage}/> */}
-					
-					<Route exact path='/' component={HomePage} />
-					<PrivateRoute exact path='/quiz' component={QuizPage} />
+					<Route exact path='/s' component={HomePage} />
 					<Route exact path='/register' component={RegisterPage} />
 					<Route exact path='/login' component={LoginPage} />
 					<Route exact path='/forgotpassword' component={ForgotPasswordPage} />
@@ -50,6 +48,12 @@ const App = () => {
 					/>
 					
 					<Route exact path='/loading' component={LoadingPage} />
+				</Switch>
+
+				{/* Private Routes */}
+				<Switch location={location} key={location.pathname}>
+					<PrivateRoute exact path='/quiz' component={QuizPage} />
+					<PrivateRoute exact path='/' component={ProfilePage} />
 				</Switch>
 			</AnimatePresence>
 		</>
