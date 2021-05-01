@@ -17,6 +17,7 @@ import LoadingPage from './pages/LoadingPage'
 
 //Routing
 import PrivateRoute from './routing/PrivateRoute'
+import PrivateRouteHome from './routing/PrivateRouteHome'
 
 //private pages
 import ProfilePage from './pages/ProfilePage'
@@ -53,7 +54,7 @@ const App = () => {
 				{/* Private Routes */}
 				<Switch location={location} key={location.pathname}>
 					<PrivateRoute exact path='/quiz' component={QuizPage} />
-					<PrivateRoute exact path='/' component={ProfilePage} />
+					<PrivateRouteHome exact path='/' component={ProfilePage} />
 				</Switch>
 			</AnimatePresence>
 		</>

@@ -1,6 +1,6 @@
 import { Redirect, Route } from 'react-router-dom'
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+const PrivateRouteHome = ({ component: Component, ...rest }) => {
 	return (
 		<Route
 			{...rest}
@@ -8,11 +8,11 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 				localStorage.getItem('authToken') ? (
 					<Component {...props} />
 				) : (
-					<Redirect to='/login' />
+					<Redirect to='/s' />
 				)
 			}
 		/>
 	)
 }
 
-export default PrivateRoute
+export default PrivateRouteHome
