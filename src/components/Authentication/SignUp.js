@@ -142,7 +142,7 @@ const Styled = styled.div`
 
 			&:valid + .placeholder,
 			&:focus + .placeholder {
-				top: -3px;
+				top: 0px;
 				font-size: 0.75rem;
 				color: ${lightGray};
 			}
