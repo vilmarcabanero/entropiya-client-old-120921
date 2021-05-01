@@ -10,7 +10,6 @@ import HomePage from './pages/HomePage'
 import SignUpPage from './pages/Authentication/SignUpPage'
 import SignInPage from './pages/Authentication/SignInPage'
 import QuizPage from './pages/Quiz/QuizPage'
-import ProductsPage from './pages/ProductsPage'
 
 const App = () => {
 	const location = useLocation()
@@ -31,7 +30,6 @@ const App = () => {
 					<Route exact path='/signup' component={SignUpPage} />
 					<Route exact path='/signin' component={SignInPage} />
 					<Route exact path='/quiz' component={QuizPage} />
-					<Route exact path='/products' component={ProductsPage} />
 				</Switch>
 			</AnimatePresence>
 		</>
