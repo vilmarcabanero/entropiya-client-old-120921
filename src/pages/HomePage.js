@@ -4,7 +4,7 @@ import SignInButton from '../components/Home/SignInButton'
 import StoryCard from '../components/Home/StoryCard'
 import { motion } from 'framer-motion'
 
-const Home = () => {
+const HomePage = () => {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -24,4 +24,4 @@ const Home = () => {
 	)
 }
 
-export default Home
+export default HomePage

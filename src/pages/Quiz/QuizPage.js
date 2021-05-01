@@ -1,5 +1,5 @@
-import QuizCategories from '../components/Quiz/QuizCategories'
-import Quiz from '../components/Quiz/Quiz'
+import QuizCategories from '../../components/Quiz/QuizCategories'
+import Quiz from '../../components/Quiz/Quiz'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 

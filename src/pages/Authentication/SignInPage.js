@@ -1,7 +1,7 @@
-import SignIn from '../components/SignIn/SignIn'
-import EntropiyaLogo from '../components/Home/EntropiyaLogo'
+import SignIn from '../../components/Authentication/SignIn'
+import EntropiyaLogo from '../../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
-import Mathjax from '../components/Quiz/Mathjax'
+import Mathjax from '../../components/Quiz/Mathjax'
 
 const App = () => {
 	return (

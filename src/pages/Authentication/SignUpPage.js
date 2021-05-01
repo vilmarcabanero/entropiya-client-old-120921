@@ -1,5 +1,5 @@
-import SignUp from '../components/SignUp/SignUp'
-import EntropiyaLogo from '../components/Home/EntropiyaLogo'
+import SignUp from '../../components/Authentication/SignUp'
+import EntropiyaLogo from '../../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
 
 const App = () => {

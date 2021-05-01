@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const EntropiyaLogo = () => {
 	return (
 		<StyledLogo>
-			<Link to='/' className='home-logo'>
+			<Link to='/products' className='home-logo'>
 				<img src={logo} alt='Logo'  />
 			</Link>
 		</StyledLogo>

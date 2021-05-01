@@ -1,5 +1,4 @@
 // `\\(  \\frac{x+y}{x-y}  \\)`
-import {M} from '../components/Math'
 
 let pi = `\\(\\pi\\)`
 let theta = `\\(\\theta\\)`
