@@ -1,10 +1,10 @@
 // `\\(  \\frac{x+y}{x-y}  \\)`
 
-let pi = `\\(\\pi\\)`
-let theta = `\\(\\theta\\)`
-let fraction = `\\(  \\frac{x+y}{x-y}  \\)`
+// let pi = `\\(\\pi\\)`
+// let theta = `\\(\\theta\\)`
+// let fraction = `\\(  \\frac{x+y}{x-y}  \\)`
 let math = `$A = \\pi r^2$`
-let area = `\\(A = \\pi r^2\\)`
+// let area = `\\(A = \\pi r^2\\)`
 export const econ = [
 	{
 		category: `Science: Mathematics`,

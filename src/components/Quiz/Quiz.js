@@ -42,7 +42,7 @@ const Quiz = () => {
 	// return <div>{parse(results[0].question)}</div>
 	return (
 		<MathJaxContext version={3} config={config}>
-			<MathJax hideUntilTypeset={'first'}>
+			<MathJax>
 				<div dangerouslySetInnerHTML={{ __html: econ[0].question }}></div>
 			</MathJax>
 		</MathJaxContext>
@@ -50,3 +50,5 @@ const Quiz = () => {
 }
 
 export default Quiz
+
+// hideUntilTypeset={'first'} attribute ng MathJax
