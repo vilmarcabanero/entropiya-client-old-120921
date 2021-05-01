@@ -1,4 +1,5 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
@@ -9,47 +10,94 @@ const gray = '808080'
 const lightGray = '#D3D3D3'
 const gainsboro = '#DCDCDC'
 
-export default function SignIn() {
+const Login = ({ history }) => {
 	const [PasswordInputType, ToggleIcon] = usePasswordToggle()
+
+	const [email, setEmail] = useState('')
+	const [password, setPassword] = useState('')
+	const [error, setError] = useState('')
+	const [loading, setLoading] = useState(false)
+
+	useEffect(() => {
+		if (localStorage.getItem('authToken')) {
+			history.push('/')
+		}
+	}, [history])
+
+	const loginHandler = async e => {
+		e.preventDefault()
+
+		const config = {
+			header: {
+				'Content-Type': 'application/json',
+			},
+		}
+
+		try {
+			const { data } = await axios
+				.post('/api/auth/login', { email, password }, config)
+				.then(setLoading(true))
+
+			localStorage.setItem('authToken', data.token)
+
+			history.push('/')
+		} catch (error) {
+			setError(error.response.data.error)
+			setTimeout(() => {
+				setError('')
+			}, 5000)
+		}
+	}
 
 	return (
 		<>
 			{/* <Header /> */}
-			<Styled>
-				<h1>Sign in</h1>
-				<div className='flex'>
-					<label className='custom-input'>
-						<input className='email' placeholder='' required />
-						<span className='placeholder'>Email address</span>
-					</label>
-				</div>
+			<form onSubmit={loginHandler}>
+				<Styled>
+					<h1>Sign in</h1>
+					{error && <span className='error-message'>{error}</span>}
+					<div className='flex'>
+						<label className='custom-input'>
+							<input
+								className='email'
+								placeholder=''
+								required
+								onChange={e => setEmail(e.target.value)}
+								value={email}
+							/>
+							<span className='placeholder'>Email address</span>
+						</label>
+					</div>
 
-				<div className='password-container'>
-					<label className='custom-input'>
-						<input
-							className='password'
-							placeholder=''
-							type={PasswordInputType}
-							required
-						/>
-						<span className='placeholder'>Password</span>
-					</label>
-					<div className='visibility'>{ToggleIcon}</div>
-				</div>
-				{/* <a href='/' className='forgot-password'>
+					<div className='password-container'>
+						<label className='custom-input'>
+							<input
+								className='password'
+								placeholder=''
+								type={PasswordInputType}
+								required
+								onChange={e => setPassword(e.target.value)}
+								value={password}
+							/>
+							<span className='placeholder'>Password</span>
+						</label>
+						<div className='visibility'>{ToggleIcon}</div>
+					</div>
+					{/* <a href='/' className='forgot-password'>
 					Forgot password?
 				</a> */}
-				<Link to='/quiz' className='button'>
-					Sign in
-				</Link>
-				<div className='new'>
-					<span>New to Entropiya? </span>{' '}
-					<Link className='link' to='/'>
-						{' '}
-						Sign up now
-					</Link>
-				</div>
-			</Styled>
+					<button type='submit' className='button'>
+						{loading ? 'Signing in...' : 'Sign in'}
+					</button>
+					<div className='new'>
+						<span>New to Entropiya? </span>{' '}
+						<Link className='link' to='/'>
+							{' '}
+							Sign up now
+						</Link>
+					</div>
+				</Styled>
+			</form>
 		</>
 	)
 }
@@ -99,6 +147,19 @@ const Styled = styled.div`
 			margin: 0 0 0.5rem 0;
 		}
 	}
+
+	.error-message {
+		width: 100%;
+		display: inline-block;
+		padding: 5px;
+		background: red;
+		color: #fff;
+		text-align: center;
+		margin: 0.5rem 0;
+		position: absolute;
+		top: 3rem;
+	}
+
 	.custom-input {
 		position: relative;
 		width: 100%;
@@ -142,7 +203,6 @@ const Styled = styled.div`
 				font-size: 0.75rem;
 				color: ${lightGray};
 			}
-
 		}
 
 		.placeholder {
@@ -252,3 +312,4 @@ const Styled = styled.div`
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 `
+export default Login

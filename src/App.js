@@ -9,7 +9,7 @@ import Header from './components/Home/Header'
 import EntropiyaLogo from './components/Home/EntropiyaLogo'
 import HomePage from './pages/HomePage'
 import RegisterPage from './pages/Authentication/RegisterPage'
-import LoginPage from './pages/Authentication/LoginPage'
+// import LoginPage from './pages/Authentication/LoginPage'
 import ForgotPasswordPage from './pages/Authentication/ForgotPasswordPage'
 import ResetPasswordPage from './pages/Authentication/ResetPasswordPage'
 import QuizPage from './pages/Quiz/QuizPage'
@@ -21,6 +21,8 @@ import PrivateRouteHome from './routing/PrivateRouteHome'
 
 //private pages
 import ProfilePage from './pages/ProfilePage'
+
+import LoginPage2 from './components/Authentication/LoginScreen'
 
 const App = () => {
 	const location = useLocation()
@@ -40,7 +42,7 @@ const App = () => {
 				<Switch location={location} key={location.pathname}>
 					<Route exact path='/s' component={HomePage} />
 					<Route exact path='/register' component={RegisterPage} />
-					<Route exact path='/login' component={LoginPage} />
+					<Route exact path='/login' component={LoginPage2} />
 					<Route exact path='/forgotpassword' component={ForgotPasswordPage} />
 					<Route
 						exact
