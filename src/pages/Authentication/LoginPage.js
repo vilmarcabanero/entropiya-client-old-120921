@@ -1,9 +1,9 @@
-import SignIn from '../../components/Authentication/Login'
+import Login2 from '../../components/Authentication/Login2'
 import EntropiyaLogo from '../../components/Home/EntropiyaLogo'
 import { motion } from 'framer-motion'
 import Background from '../../components/Particles/Background'
 
-const SignInPage = () => {
+const LoginPage = () => {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -13,11 +13,11 @@ const SignInPage = () => {
 		>
 			<div>
 			<Background/>
-				<SignIn />
+				<Login2 />
 				<br></br><br></br>
 			</div>
 		</motion.div>
 	)
 }
 
-export default SignInPage
+export default LoginPage

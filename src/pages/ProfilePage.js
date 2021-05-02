@@ -47,10 +47,10 @@ const ProfilePage = ({ history }) => {
 				{/* <Header /> */}
 				<ParticleBackground />
 				<div className='header'>
-					<EntropiyaLogo />
+					<EntropiyaLogo /><div className='private-data'>{privateData}</div><h1>Hello</h1>
 				</div>
-				<SignInButton />
-				<div className='private-data'>{privateData}</div>
+				<SignInButton className='button' />
+				
 			</Styled>
 		</motion.div>
 	)
@@ -64,9 +64,9 @@ const Styled = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	width: 60rem; //Initial width, similar sa netflix which is 59.375 or 950 pixels
+	width: 100%; //Initial width, similar sa netflix which is 59.375 or 950 pixels
 
-	margin: 4.75rem 0;
+	margin: 0rem 0;
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
@@ -95,6 +95,11 @@ const Styled = styled.div`
     font-size: 1.2rem;
     color: white;
   }
+
+	.button {
+		position: absolute;
+		top: -8rem;
+	}
 `
 
 export default ProfilePage

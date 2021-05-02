@@ -9,7 +9,7 @@ import Header from './components/Home/Header'
 import EntropiyaLogo from './components/Home/EntropiyaLogo'
 import HomePage from './pages/HomePage'
 import RegisterPage from './pages/Authentication/RegisterPage'
-// import LoginPage from './pages/Authentication/LoginPage'
+import LoginPage from './pages/Authentication/LoginPage'
 import ForgotPasswordPage from './pages/Authentication/ForgotPasswordPage'
 import ResetPasswordPage from './pages/Authentication/ResetPasswordPage'
 import QuizPage from './pages/Quiz/QuizPage'
@@ -22,7 +22,7 @@ import PrivateRouteHome from './routing/PrivateRouteHome'
 //private pages
 import ProfilePage from './pages/ProfilePage'
 
-import LoginPage2 from './components/Authentication/LoginScreen'
+import LoginPage2 from './pages/Authentication/LoginPage2'
 
 const App = () => {
 	const location = useLocation()
