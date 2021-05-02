@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
 
 const QuizCategories = () => {
 	const [categories, setCategories] = useState([]);
 	const fetchQuizCategories = async () => {
 		const { data } = await axios.get(
 			'https://opentdb.com/api.php?amount=10&category=19&difficulty=easy'
+			// 'https://entropiya-server.herokuapp.com/questions'
+			
 		);
 		const formattedData = data.results.map(category => {
 			const incorrectAnswersIndexes = category.incorrect_answers.length;
@@ -21,6 +24,7 @@ const QuizCategories = () => {
 			};
 		});
 		setCategories(formattedData);
+		console.log(formattedData)
 	};
 
 	useEffect(() => {

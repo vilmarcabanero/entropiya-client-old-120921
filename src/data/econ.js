@@ -6,7 +6,7 @@
 let math = `$A = \\pi r^2$`
 // let area = `\\(A = \\pi r^2\\)`
 export const econ = [
-	{
+	{ 
 		category: `Science: Mathematics`,
 		type: 'multiple',
 		difficulty: 'easy',

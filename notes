@@ -8,3 +8,5 @@ FaChevronDown
 
 'Problem with placeholder, kapag naload ang saved email or password, nagooverlap'
 
+
+	"proxy": "http://localhost:5000",
