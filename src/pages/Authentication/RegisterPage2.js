@@ -43,7 +43,7 @@ export default function SignUp({ history }) {
 
 		try {
 			const { data } = await axios.post(
-				'/api/auth/register',
+				'https://entropiya-server.herokuapp.com/api/auth/register',
 				{
 					username,
 					email,
