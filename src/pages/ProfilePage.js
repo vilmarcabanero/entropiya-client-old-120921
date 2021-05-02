@@ -34,6 +34,11 @@ const ProfilePage = ({ history }) => {
 		fetchPrivateDate()
 	}, [history])
 
+	const logoutHandler = () => {
+		localStorage.removeItem('authToken')
+		history.push('/login')
+	}
+
 	return error ? (
 		<span className='error-message'>{error}</span>
 	) : (
@@ -47,10 +52,13 @@ const ProfilePage = ({ history }) => {
 				{/* <Header /> */}
 				<ParticleBackground />
 				<div className='header'>
-					<EntropiyaLogo /><div className='private-data'>{privateData}</div><h1>Hello</h1>
+					<EntropiyaLogo />
+					<div className='private-data'>{privateData}</div>
+					<h1>Hello</h1>
 				</div>
-				<SignInButton className='button' />
-				
+				<button className='button' onClick={logoutHandler}>
+					Log out
+				</button>
 			</Styled>
 		</motion.div>
 	)
@@ -91,14 +99,40 @@ const Styled = styled.div`
 		top: 2rem;
 	}
 
-  .private-data {
-    font-size: 1.2rem;
-    color: white;
-  }
+	.private-data {
+		font-size: 1.2rem;
+		color: white;
+	}
 
 	.button {
 		position: absolute;
-		top: -8rem;
+		right: 3rem;
+		top: 1.25rem;
+		display: flex;
+		align-items: center;
+		justify-self: flex-end !important;
+		justify-content: center;
+		font-size: 1.1rem;
+		background-color: #06f;
+		color: white;
+		height: 2.3rem;
+		border: 1px solid #06f;
+		border-radius: 5px;
+		padding: 0 0.75rem;
+		text-decoration: none;
+
+		@media (max-width: 30rem) {
+			font-size: 1rem;
+			height: 1.75rem;
+			position: absolute;
+			right: 1rem;
+			top: -2.15rem;
+		}
+		&:hover {
+			color: white;
+			background-color: transparent;
+			border-color: #06f;
+		}
 	}
 `
 

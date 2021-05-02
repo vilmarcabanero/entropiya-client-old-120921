@@ -97,7 +97,7 @@ const LoginScreen = ({ history }) => {
 						</button>
 						<div className='new'>
 							<span>New to Entropiya? </span>{' '}
-							<Link className='link' to='/'>
+							<Link className='link' to='/register'>
 								{' '}
 								Sign up now
 							</Link>
