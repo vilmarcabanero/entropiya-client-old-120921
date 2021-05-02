@@ -1,11 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 import { FaAngleDown } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-
-//For email
-import { useState } from 'react'
-import axios from 'axios'
 
 let userEmailFromInput = ''
 

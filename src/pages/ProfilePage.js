@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import API from '../api'
 
-import Header from '../components/Home/Header'
 import EntropiyaLogo from '../components/Home/EntropiyaLogo'
-import SignInButton from '../components/Home/SignInButton'
-import StoryCard from '../components/Home/StoryCard'
 import { motion } from 'framer-motion'
 import ParticleBackground from '../components/Particles/ParticleBackground'
 import styled from 'styled-components'
@@ -23,7 +20,7 @@ const ProfilePage = ({ history }) => {
 			}
 
 			try {
-				const { data } = await axios.get('https://entropiya-server.herokuapp.com/api/private', config)
+				const { data } = await API.get('private', config)
 				setPrivateData(data.data)
 			} catch (error) {
 				localStorage.removeItem('authToken')

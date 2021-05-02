@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { MathJax, MathJaxContext } from 'better-react-mathjax'
 
 const QuizCategories = () => {
+	// eslint-disable-next-line
 	const [categories, setCategories] = useState([]);
 	const fetchQuizCategories = async () => {
 		const { data } = await axios.get(

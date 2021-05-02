@@ -1,4 +1,4 @@
-import Header from '../components/Home/Header'
+
 import EntropiyaLogo from '../components/Home/EntropiyaLogo'
 import SignInButton from '../components/Home/SignInButton'
 import StoryCard from '../components/Home/StoryCard'
