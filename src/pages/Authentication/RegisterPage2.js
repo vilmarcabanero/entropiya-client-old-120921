@@ -1,29 +1,29 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import usePasswordToggle from '../../hooks/usePasswordToggle'
+import { Link } from 'react-router-dom'
+// import Header from './Header'
 
 import { motion } from 'framer-motion'
 import Background from '../../components/Particles/Background'
 
+const darkGray = '#A9A9A9'
+const gray = '808080'
 const lightGray = '#D3D3D3'
 const gainsboro = '#DCDCDC'
 
-const LoginScreen = ({ history }) => {
+export default function SignUp({ history }) {
 	const [PasswordInputType, ToggleIcon] = usePasswordToggle()
+
+	const [username, setUsername] = useState('')
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
+	// const [confirmpassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState('')
 	const [loading, setLoading] = useState(false)
 
-	useEffect(() => {
-		if (localStorage.getItem('authToken')) {
-			history.push('/')
-		}
-	}, [history])
-
-	const loginHandler = async e => {
+	const registerHandler = async e => {
 		e.preventDefault()
 
 		const config = {
@@ -32,10 +32,25 @@ const LoginScreen = ({ history }) => {
 			},
 		}
 
+		// if (password !== confirmpassword) {
+		//   setPassword("");
+		//   setConfirmPassword("");
+		//   setTimeout(() => {
+		//     setError("");
+		//   }, 5000);
+		//   return setError("Passwords do not match");
+		// }
+
 		try {
-			const { data } = await axios
-				.post('/api/auth/login', { email, password }, config)
-				.then(setLoading(true))
+			const { data } = await axios.post(
+				'/api/auth/register',
+				{
+					username,
+					email,
+					password,
+				},
+				config
+			).then(setLoading(true))
 
 			localStorage.setItem('authToken', data.token)
 
@@ -50,63 +65,76 @@ const LoginScreen = ({ history }) => {
 	}
 
 	return (
-		<>
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
-				transition={{ duration: 1 }}
-			>
-				<Background />
-				<form onSubmit={loginHandler}>
-					<Styled>
-						<h1>Sign in</h1>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 1 }}
+		>
+			<Background />
+			<form onSubmit={registerHandler}>
+				<Styled>
+					<h1>Create an account</h1>
 
-						<div className='flex'>
-							<label className='custom-input'>
-								<input
-									className='email'
-									placeholder=''
-									required
-									onChange={e => setEmail(e.target.value)}
-									value={email}
-								/>
-								<span className='placeholder'>Email address</span>
-							</label>
-						</div>
+					<div className='flex'>
+						<label className='custom-input'>
+							<input
+								className='username'
+								placeholder=''
+								required
+								value={username}
+								onChange={e => setUsername(e.target.value)}
+							/>
+							<span className='placeholder'>Username</span>
+						</label>
+						{/* <label className='custom-input'>
+						<input className='firstname' placeholder='' required />
+						<span className='placeholder'>First name</span>
+					</label>
+					<label className='custom-input'>
+						<input className='lastname' required />
+						<span className='placeholder'>Last name</span>
+					</label> */}
+						<label className='custom-input'>
+							<input
+								className='email'
+								placeholder=''
+								required
+								onChange={e => setEmail(e.target.value)}
+								value={email}
+							/>
+							<span className='placeholder'>Email address</span>
+						</label>
+					</div>
 
-						<div className='password-container'>
-							<label className='custom-input'>
-								<input
-									className='password'
-									placeholder=''
-									type={PasswordInputType}
-									required
-									onChange={e => setPassword(e.target.value)}
-									value={password}
-								/>
-								<span className='placeholder'>Password</span>
-							</label>
-							<div className='visibility'>{ToggleIcon}</div>
-						</div>
-						{/* <a href='/' className='forgot-password'>
-				Forgot password?
-			</a> */}
-						<button type='submit' className='button'>
-							{loading ? 'Signing in...' : 'Sign in'}
-						</button>
-						<div className='new'>
-							<span>New to Entropiya? </span>{' '}
-							<Link className='link' to='/'>
-								{' '}
-								Sign up now
-							</Link>
-						</div>
-						{error && <span className='error-message'>{error}</span>}
-					</Styled>
-				</form>
-			</motion.div>
-		</>
+					<div className='password-container'>
+						<label className='custom-input'>
+							<input
+								className='password'
+								placeholder=''
+								type={PasswordInputType}
+								required
+								value={password}
+								onChange={e => setPassword(e.target.value)}
+							/>
+							<span className='placeholder'>Password</span>
+						</label>
+						<div className='visibility'>{ToggleIcon}</div>
+					</div>
+					<button type='submit'  className='button'>
+					{loading ? 'Signing up...' : 'Sign up'}
+					</button>
+					<div className='already'>
+						<span>Already have an account? </span>{' '}
+						<Link to='/login' className='link'>
+							{' '}
+							Sign in
+						</Link>
+					</div>
+					{error && <span className="error-message">{error}</span>}
+				</Styled>
+			</form>
+		</motion.div>
 	)
 }
 
@@ -126,7 +154,7 @@ const Styled = styled.div`
 	border-radius: 5px;
 
 	margin: 2rem auto;
-	padding: 4rem 3rem 5rem 3rem;
+	padding: 4rem 3rem 4rem 3rem;
 
 	/* background-color: #262626; */
 	/* background-color: rgba(38, 38, 38, 0.75); */
@@ -146,29 +174,29 @@ const Styled = styled.div`
 	h1 {
 		font-size: 2rem;
 		margin-left: 0.5rem;
-		/* margin-bottom: 1.75rem; */
-		margin-bottom: 3rem;
+		margin-bottom: 1.75rem;
 		align-self: flex-start;
-		cursor: text;
 		@media (max-width: 30rem) {
 			font-size: 1.75rem;
 			padding-left: 0.5rem;
 			margin: 0 0 0.5rem 0;
 		}
+		cursor: text;
 	}
 
 	.error-message {
-		width: 100%;
-		display: inline-block;
-		color: red;
-		background-color: white;
-		border-radius: 0 0 5px 5px;
-		padding: 2px 6px;
-		position: absolute;
-		bottom: 0;
-		text-align: center;
-		font-weight: 500;
-	}
+	width: 100%;
+	display: inline-block;
+	color: red;
+	background-color: white;
+	border-radius: 0 0 5px 5px;
+	padding: 2px 6px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-weight: 500;
+}
+
 
 	.custom-input {
 		position: relative;
@@ -179,7 +207,7 @@ const Styled = styled.div`
 			cursor: text;
 		}
 
-		.email {
+		.username {
 			border-radius: 5px;
 		}
 
@@ -230,6 +258,7 @@ const Styled = styled.div`
 		display: flex;
 		position: relative;
 		width: 100%;
+		flex-direction: column;
 	}
 
 	.password-container {
@@ -283,25 +312,9 @@ const Styled = styled.div`
 
 	//End
 
-	.forgot-password {
-		align-self: flex-start;
-		margin-top: -1rem;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-		text-decoration: none;
-		color: white;
-		font-weight: 550;
-		&:hover {
-			opacity: 0.75;
-		}
-	}
-
-	.new {
-		padding-top: 1rem;
-		padding-right: 0.75rem;
+	.already {
 		align-self: flex-end;
+		margin-top: 1.25rem;
 		cursor: text;
 		.link {
 			text-decoration: none;
@@ -322,4 +335,3 @@ const Styled = styled.div`
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 `
-export default LoginScreen

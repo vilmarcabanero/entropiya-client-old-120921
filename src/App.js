@@ -23,6 +23,7 @@ import PrivateRouteHome from './routing/PrivateRouteHome'
 import ProfilePage from './pages/ProfilePage'
 
 import LoginPage2 from './pages/Authentication/LoginPage2'
+import RegisterPage2 from './pages/Authentication/RegisterPage2'
 
 const App = () => {
 	const location = useLocation()
@@ -41,7 +42,7 @@ const App = () => {
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route exact path='/s' component={HomePage} />
-					<Route exact path='/register' component={RegisterPage} />
+					<Route exact path='/register' component={RegisterPage2} />
 					<Route exact path='/login' component={LoginPage2} />
 					<Route exact path='/forgotpassword' component={ForgotPasswordPage} />
 					<Route

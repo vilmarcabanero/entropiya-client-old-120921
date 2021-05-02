@@ -14,10 +14,10 @@ const Header = () => {
 				Video Lectures, Formulas, <span>Quizzes, and more.</span>
 			</h2>
 			<div className='form'>
-				<h3>
+				{/* <h3>
 					Ready to pass? Enter your email and try now  for free.
-					{/* <span>30-day</span> free trial. */}
-				</h3>
+					<span>30-day</span> free trial.
+				</h3> */}
 				<OptForm/>
 			</div>
 		</StyledStoryCard>

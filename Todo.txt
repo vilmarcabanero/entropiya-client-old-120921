@@ -1,3 +1,6 @@
 1. Authentication
 2. Quiz (Engineering Econ, embed the solution? Image from gdrive)
 3. Study MCQs econ
+
+Animation for signing up and signing in
+Signing up ... dot dot dot
