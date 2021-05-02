@@ -34,7 +34,7 @@ const LoginScreen = ({ history }) => {
 
 		try {
 			const { data } = await axios
-				.post('https://www.entropiya.ph/api/auth/login', { email, password }, config)
+				.post('/api/auth/login', { email, password }, config)
 				.then(setLoading(true))
 
 			localStorage.setItem('authToken', data.token)
