@@ -43,7 +43,7 @@ const ProfilePage = ({ history }) => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			transition={{ duration: 1 }}
+			transition={{ duration: 0.5 }}
 		>
 			<Styled>
 				{/* <Header /> */}
@@ -71,6 +71,7 @@ const Styled = styled.div`
 
 	width: 100%; //Initial width, similar sa netflix which is 59.375 or 950 pixels
 
+	z-index: 20;
 	margin: 0rem 0;
 	margin-left: auto;
 	margin-right: auto;

@@ -15,7 +15,7 @@ const OptForm = () => {
 							id=''
 							required
 						/>
-
+ 
 						<span className='placeholder'>Email address</span>
 					</label> */}
 

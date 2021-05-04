@@ -20,6 +20,7 @@ export default function SignUp({ history }) {
 	// const [confirmpassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState('')
 	const [loading, setLoading] = useState(false)
+	let [dateRegistered, setDateRegistered] = useState('')
 
 	const registerHandler = async e => {
 		e.preventDefault()
@@ -46,13 +47,18 @@ export default function SignUp({ history }) {
 					username,
 					email,
 					password,
+					dateRegistered,
 				},
 				config
-			).then(setLoading(true))
+			).then(setLoading(true)).then(setDateRegistered(Date()))
 
+			alert(dateRegistered)
+			// setDateRegistered(Date.now())
 			localStorage.setItem('authToken', data.token)
 
 			history.push('/')
+
+			
 		} catch (error) {
 			setError(error.response.data.error)
 			setTimeout(() => {
@@ -67,7 +73,7 @@ export default function SignUp({ history }) {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			transition={{ duration: 1 }}
+			transition={{ duration: 0.5 }}
 		>
 			<Background />
 			<form onSubmit={registerHandler}>
@@ -148,6 +154,7 @@ const Styled = styled.div`
 	justify-content: center;
 	align-items: center;
 
+	z-index: 20;
 	width: 28rem;
 	border-radius: 5px;
 

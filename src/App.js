@@ -40,13 +40,11 @@ const App = () => {
 					<Route exact path='/login' component={LoginPage} />
 					
 					<Route exact path='/loading' component={LoadingPage} />
-				</Switch>
 
-				{/* Private Routes */}
-				<Switch location={location} key={location.pathname}>
 					<PrivateRoute exact path='/quiz' component={QuizPage} />
 					<PrivateRouteHome exact path='/' component={ProfilePage} />
 				</Switch>
+
 			</AnimatePresence>
 		</>
 	)

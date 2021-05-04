@@ -58,7 +58,7 @@ const LoginScreen = ({ history }) => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-				transition={{ duration: 1 }}
+				transition={{ duration: 0.5 }}
 			>
 				<Background />
 				<form onSubmit={loginHandler}>
@@ -124,6 +124,7 @@ const Styled = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 20;
 
 	width: 28rem;
 	border-radius: 5px;
