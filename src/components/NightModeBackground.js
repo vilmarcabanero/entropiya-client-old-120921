@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export default function Background() {
 	return (
 		<Styled>
-			<h3>Please refresh the page.</h3>
+			{/* <h3>Please refresh the page.</h3> */}
 			{/* <div>
 				<h3>Please refresh the page.</h3>
 			</div> */}
