@@ -50,17 +50,16 @@ export default function SignUp({ history }) {
 					dateRegistered,
 				},
 				config
-			).then(setLoading(true)).then(setDateRegistered(Date()))
+			)
+				.then(setLoading(true))
+				.then(setDateRegistered(Date()))
 
-			
 			// localStorage.setItem('dateRegistered', dateRegistered)
 			// alert(localStorage.getItem('dateRegistered'))
 			// setDateRegistered(Date.now())
 			localStorage.setItem('authToken', data.token)
 
 			history.push('/')
-
-			
 		} catch (error) {
 			setError(error.response.data.error)
 			setTimeout(() => {
@@ -103,6 +102,7 @@ export default function SignUp({ history }) {
 					</label> */}
 						<label className='custom-input'>
 							<input
+								type='email'
 								className='email'
 								placeholder=''
 								required
@@ -127,8 +127,8 @@ export default function SignUp({ history }) {
 						</label>
 						<div className='visibility'>{ToggleIcon}</div>
 					</div>
-					<button type='submit'  className='button'>
-					{loading ? 'Signing up...' : 'Sign up'}
+					<button type='submit' className='button'>
+						{loading ? 'Signing up...' : 'Sign up'}
 					</button>
 					<div className='already'>
 						<span>Already have an account? </span>{' '}
@@ -137,7 +137,7 @@ export default function SignUp({ history }) {
 							Sign in
 						</Link>
 					</div>
-					{error && <span className="error-message">{error}</span>}
+					{error && <span className='error-message'>{error}</span>}
 				</Styled>
 			</form>
 		</motion.div>
@@ -192,18 +192,17 @@ const Styled = styled.div`
 	}
 
 	.error-message {
-	width: 100%;
-	display: inline-block;
-	color: red;
-	background-color: white;
-	border-radius: 0 0 5px 5px;
-	padding: 2px 6px;
-	position: absolute;
-	bottom: 0;
-	text-align: center;
-	font-weight: 500;
-}
-
+		width: 100%;
+		display: inline-block;
+		color: red;
+		background-color: white;
+		border-radius: 0 0 5px 5px;
+		padding: 2px 6px;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		font-weight: 500;
+	}
 
 	.custom-input {
 		position: relative;

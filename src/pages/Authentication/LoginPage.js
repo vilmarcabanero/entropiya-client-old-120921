@@ -36,9 +36,11 @@ const LoginScreen = ({ history }) => {
 			// const { data } = await axios
 			// 	.post('https://entropiya-server.herokuapp.com/api/auth/login', { email, password }, config)
 			// 	.then(setLoading(true))
-				const { data } = await API
-				.post('auth/login', { email, password }, config)
-				.then(setLoading(true))
+			const { data } = await API.post(
+				'auth/login',
+				{ email, password },
+				config
+			).then(setLoading(true))
 
 			localStorage.setItem('authToken', data.token)
 
@@ -68,6 +70,7 @@ const LoginScreen = ({ history }) => {
 						<div className='flex'>
 							<label className='custom-input'>
 								<input
+									type='email'
 									className='email'
 									placeholder=''
 									required
