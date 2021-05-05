@@ -52,7 +52,9 @@ export default function SignUp({ history }) {
 				config
 			).then(setLoading(true)).then(setDateRegistered(Date()))
 
-			alert(dateRegistered)
+			
+			// localStorage.setItem('dateRegistered', dateRegistered)
+			// alert(localStorage.getItem('dateRegistered'))
 			// setDateRegistered(Date.now())
 			localStorage.setItem('authToken', data.token)
 
