@@ -102,7 +102,7 @@ export default function SignUp({ history }) {
 					</label> */}
 						<label className='custom-input'>
 							<input
-								type='email'
+								type='text'
 								className='email'
 								placeholder=''
 								required

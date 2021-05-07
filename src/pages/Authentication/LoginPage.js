@@ -70,7 +70,7 @@ const LoginScreen = ({ history }) => {
 						<div className='flex'>
 							<label className='custom-input'>
 								<input
-									type='email'
+									type='text'
 									className='email'
 									placeholder=''
 									required
