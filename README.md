@@ -1,6 +1,6 @@
 <h1>Entropiya<a href="https://github.com/vilmarcabanero/entropiya-client">📦</a></h1>
 
-<h2><samp>Developed using the following:</samp></h2>
+<h2><samp>Developed using the the MERN Stack</samp></h2>
 
 <p>
     <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white">
