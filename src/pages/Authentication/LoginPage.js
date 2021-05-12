@@ -165,6 +165,7 @@ const Styled = styled.div`
 	}
 
 	.error-message {
+		transition: all 0.7s ease;
 		width: 100%;
 		display: inline-block;
 		color: red;
@@ -175,6 +176,7 @@ const Styled = styled.div`
 		bottom: 0;
 		text-align: center;
 		font-weight: 500;
+		
 	}
 
 	.custom-input {

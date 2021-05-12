@@ -202,6 +202,7 @@ const Styled = styled.div`
 		bottom: 0;
 		text-align: center;
 		font-weight: 500;
+		transition: all 0.5s ease;
 	}
 
 	.custom-input {
