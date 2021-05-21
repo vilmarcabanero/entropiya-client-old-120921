@@ -7,19 +7,16 @@ const Header = () => {
 	return (
 		<>
 		<StyledStoryCard>
-			<h1 className='title'>
+			{/* <h1 className='title'>
 				Online Review for <span>Board Exam.</span> 
 			</h1>
 			<h2 className='subtitle'>
 				Video Lectures, Formulas, <span>Quizzes, and more.</span>
 			</h2>
 			<div className='form'>
-				{/* <h3>
-					Ready to pass? Enter your email and try now  for free.
-					<span>30-day</span> free trial.
-				</h3> */}
 				<OptForm/>
-			</div>
+			</div> */}
+			<h1 className='title'>This website is under development.</h1>
 		</StyledStoryCard>
 		{/* <SignIn/> */}
 		</>
@@ -69,6 +66,7 @@ const StyledStoryCard = styled.nav`
 
 
 	.title {
+		margin-top: 25vh;
 		font-size: 4rem;
 		max-width: 40rem;
 		text-align: center;

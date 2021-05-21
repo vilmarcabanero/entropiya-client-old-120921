@@ -16,10 +16,10 @@ const HomePage = () => {
 			<Styled>
 				{/* <Header /> */}
 				<ParticleBackground />
-				<div className='header'>
+				{/* <div className='header'>
 					<EntropiyaLogo />
 				</div>
-				<SignInButton />
+				<SignInButton /> */}
 				<StoryCard />
 			</Styled>
 		</motion.div>
